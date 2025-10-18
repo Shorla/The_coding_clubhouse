@@ -11,11 +11,11 @@ module.exports = {
         brand: {
           purple: "#8C52FF",   
           violet: "#C46BE4", 
-          blue: "#18EB4",   
+          blue: "#184EB4",   
           yellow: "#FFD447",  
           aqua: "#00C2A8", 
           coral: "#FF6F61",
-          gray: "#FSF7FB",
+          gray: "#C9C9C9",
           white: "#FFFFFF",
           charcoal: "#2D2D2D",    
         },
