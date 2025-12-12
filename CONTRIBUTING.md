@@ -1,87 +1,105 @@
 # Contributing to The_coding_clubhouse
 
-Thanks for your interest in contributing! 🎉
-We welcome all kinds of contributions: bug fixes, new features, documentation, and design improvements.
-Please take a moment to read these guidelines before you get started.
-You can help out the project by just * starring this repository from the upper right corner and also pinning it to your profile.
+Thanks for your interest in contributing! We welcome all kinds of contributions: bug fixes, new features, documentation, and design improvements.
+
+## Table of Contents
+- [Branch Naming and Workflow](#1-branch-naming-and-workflow)
+- [Code Style and Structure](#2-code-style-and-structure)
+- [Pull Request Process](#3-pull-request-process)
+- [Code Review Guidelines](#4-code-review-guidelines)
+- [Commit Message Format](#5-commit-message-format)
 
 ---
 
-## 1. Getting Started
+## 1. Branch Naming and Workflow
 
-### 🛠️ Prerequisites
+### Branch Naming Conventions
+- `feature/` - New features or enhancements
+- `bugfix/` - Bug fixes
+- `hotfix/` - Critical production fixes
+- `docs/` - Documentation updates
+- `refactor/` - Code refactoring
+- `test/` - Adding or updating tests
 
-- A web browser (Chrome, Firefox, Edge, or Safari)
-- A code editor like [VS Code](https://code.visualstudio.com/)
-- [Git](https://git-scm.com/) for version control
+### Branch Management
+1. **Create a new branch** for your work:
+   ```bash
+   git checkout -b type/descriptive-name
+   # Example:
+   git checkout -b feature/user-authentication
+   ```
+
+2. **Keep your branch updated**:
+   ```bash
+   git fetch origin
+   git rebase origin/main
+   # Resolve any conflicts if they occur
+   ```
+
+3. **Push your changes**:
+   ```bash
+   git push -u origin your-branch-name
+   ```
+
+### Avoiding Merge Conflicts
+- Make small, focused commits
+- Rebase frequently to stay up-to-date with main
+- Resolve conflicts as they arise
+- Test your changes before pushing
 
 ---
 
-### 📂 Repository Link
+## Avoiding Merge Conflicts
 
-[Project Repository](https://github.com/Shorla/The_coding_clubhouse)
+To minimize merge conflicts:
 
----
+1. **Always work on a new branch** for each feature or bugfix
+2. **Keep your branch up to date** with the main branch:
+   ```bash
+   git fetch origin
+   git rebase origin/main  # or git merge origin/main
+   ```
+3. **Make small, focused commits** that address a single concern
+4. **Pull before you push** to ensure you have the latest changes
+5. **Resolve conflicts immediately** when they occur
 
-## 2. Cloning the Repository
+## 2. Code Style and Structure
 
-### 🔀 Fork (if needed)
+Follow these coding guidelines to maintain consistency across the project:
 
-1. Click the **Fork** button in the top-right corner of the repository page on GitHub.  
-2. This creates a copy of the repository under your account.  
+- **HTML**: Use semantic HTML5 elements, indent with 2 spaces
+- **CSS/Tailwind**: 
+  - Use Tailwind utility classes primarily
+  - Keep custom CSS to a minimum
+  - Follow the design system in the project
+- **JavaScript**: 
+  - Use ES6+ features
+  - Keep functions small and focused (max 30 lines)
+  - Add JSDoc comments for public functions
+  - Use async/await instead of promises when possible
 
-### 📥 Clone Locally
+### File and Folder Structure
 
-Clone the repository to your local machine:
+- Use kebab-case for all file and folder names
+- Keep related files together in feature-based directories
+- Components should be self-contained with their own styles and tests
 
-```bash
-git clone https://github.com/Shorla/The_coding_clubhouse
-cd The_coding_clubhouse 
+### Component Documentation
+
+Each component should include:
+
+```javascript
+/**
+ * Component Name
+ * 
+ * @description Brief description of the component's purpose
+ * @prop {type} propName - Description of prop
+ * @example
+ * <ComponentName propName="value" />
+ */
 ```
 
----
-
-## 3. Setting Up the Project
-
-1. Navigate into the project directory:
-
-``` bash
-cd The_coding_clubhouse
-```
-
-2. No dependencies required-simply open index.html in your browser.
-
----
-
-## 4. Branching Workflow
-
-### 🌿 Branch Naming Convention
-
-#### Use prefixes based on the type of work:
-
-- `feature/short-description`
-- `bugfix/short-description`
-- `hotfix/short-description` 
-
-## ➕ Create a New Branch
-
-``` bash
-git checkout -b feature/short-description
-```
-
----
-
-## 5. Making Changes
-
-### 🎨 Coding Style Guidelines
-
-- #### HTML: `semantic, indented with 2 spaces`.
-
-- #### CSS/Tailwind: `Keep classes organized, avoid repetition.`
-
-- #### JavaScript: `use ES6+ features, keep functions small and modular, add comments for clarity.`
-
-### 📝 Commit Message Convention
+### Commit Message Convention
 
 Use this format:
 
@@ -95,7 +113,7 @@ type(scope): short description
 - `fix(form): correct email validation`
 
 
-### ➕ Stage and Commit
+### Stage and Commit
 
 ``` bash
 git add .
@@ -104,69 +122,58 @@ git commit -m "feat: add mobile navigation toggle"
 
 ---
 
-## 6. Pushing Changes
+## 3. Pull Request Process
 
-Push your branch to the remote repository:
+### Creating a Pull Request
+1. Push your branch and create a PR to `main`
+2. Include a clear description of changes
+3. Reference any related issues
+4. Assign appropriate reviewers
 
-``` bash
-git push origin feature/ short-description
+### PR Review Process
+- Address all review comments
+- Keep the PR focused on a single concern
+- Ensure all tests pass
+- Update documentation if needed
+
+## 4. Code Review Guidelines
+
+### As a Reviewer
+- Be constructive and specific
+- Focus on code quality and maintainability
+- Check for potential bugs or edge cases
+- Verify tests cover the changes
+
+### As an Author
+- Be responsive to feedback
+- Explain your reasoning when needed
+- Keep the discussion professional
+- Update documentation to reflect changes
+
+## 5. Commit Message Format
+
+Follow this format for commit messages:
+
+```
+type(scope): short description
+
+Longer description if needed
+
+Fixes #issue-number
 ```
 
----
+### Types:
+- `feat`: New feature
+- `fix`: Bug fix
+- `docs`: Documentation changes
+- `style`: Code style/formatting
+- `refactor`: Code changes that don't fix bugs or add features
+- `test`: Adding tests
+- `chore`: Maintenance tasks
 
-## 7. Creating a Pull Request (PR)
-
-1. Go to your fork on GitHub.
-2. Click  `New Pull Request.`
-3. Select your branch and open a PR to the `main` branch.
-
-### 🖊️ Writing a Good PR Description
-
-- What you changed
-- Why you changed it
-- How to test it
-
-### 👥 Assign Reviewers
-
-Assign at least one reviewer if available.
-
-## 8. Code Review Process
-
-- Be open to feedback and willing to make changes.
-- Ask for clarification if comments are unclear.
-- Mark conversations as resolved once addressed.
-
-## 9. Merging PRs
-
-- PRs are merged only after at least 1 approval.
-- All conflicts must be resolved before merging.
-- Typically, a maintainer merges the PR.
-
-## 10. Updating Your Local Branch
-
-### 🔄 Sync with Main
-
-``` bash
-git checkout main
-git pull origin main
+### Examples:
 ```
-
-### 🔀 Merge Updates into Your Branch
-
-``` bash
-git checkout feature/short-description
-git merge main
+feat(auth): add password reset flow
+fix(api): handle null response in user endpoint
+docs(readme): update installation instructions
 ```
-
-### ⚠️ Handling Merge Conflicts
-
-- Open conflicting files in your editor.
-- Fix the conflicts manually.
-- Stage and commit the resolved files.
-
-## 11. Good Practices 
-
-- Keep commits small and meaningful.
-- `Test your changes` locally before pushing
-- Reuse existing components or partials where possible
-- Write `clear, descriptive commit messages.`
