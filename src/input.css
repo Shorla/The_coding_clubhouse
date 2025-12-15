@@ -3,9 +3,8 @@
 @tailwind utilities;
 
 @layer base {
-  body {
-    
-
+  body{
+    @apply bg-brand-white
   }
 }
 
