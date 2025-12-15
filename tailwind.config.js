@@ -24,6 +24,10 @@ module.exports = {
         heading: ["Poppins", "sans-serif"],
         sans: ["Nunito", "sans-serif"],
       },
+      backgroundImage: {
+        'hero-gradient':
+          'linear-gradient(180deg, rgba(239, 242, 255, 0.48) 0%, #FFFFFF 52.4%, #F4E8FF 100%)',
+      },
     },
   },
   plugins: [],
