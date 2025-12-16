@@ -571,8 +571,25 @@ body {
   color: rgb(255 255 255 / var(--tw-text-opacity, 1));
 }
 
+.btn-secondary {
+  border-radius: 0.125rem;
+  padding-left: 3rem;
+  padding-right: 3rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity, 1));
+}
+
 .mt-2 {
   margin-top: 0.5rem;
+}
+
+.bg-brand-gray {
+  --tw-bg-opacity: 1;
+  background-color: rgb(201 201 201 / var(--tw-bg-opacity, 1));
 }
 
 .bg-brand-purple {
