@@ -2,3 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  body{
+    @apply bg-brand-white
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply text-brand-white px-4 py-2 rounded-lg text-sm  ;
+  }
+
+
+}

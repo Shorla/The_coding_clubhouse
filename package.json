@@ -4,7 +4,8 @@
   "description": "This repository contains the source code for the official **NGO Website**, built to showcase our mission, projects, and activities while engaging supporters and volunteers.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch",
+    "build": "npx tailwindcss -i ./src/input.css -o ./dist/output.css"
   },
   "keywords": [],
   "author": "",
@@ -13,3 +14,5 @@
     "tailwindcss": "^3.4.17"
   }
 }
+
+
