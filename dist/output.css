@@ -588,24 +588,52 @@ body {
 }
 
 .btn-secondary {
+  /* Create a with secondary color. Add hover + focus states.*/
   border-radius: 0.125rem;
-  padding-left: 3rem;
-  padding-right: 3rem;
-  padding-top: 2rem;
-  padding-bottom: 2rem;
+  border-width: 2px;
+  --tw-border-opacity: 1;
+  border-color: rgb(201 201 201 / var(--tw-border-opacity, 1));
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  --tw-text-opacity: 1;
+  color: rgb(201 201 201 / var(--tw-text-opacity, 1));
+}
+
+.btn-secondary:hover, .btn-secondary:focus {
+  --tw-bg-opacity: 1;
+  background-color: rgb(140 82 255 / var(--tw-bg-opacity, 1));
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity, 1));
+}
+
+.btn-outline {
+  border-radius: 0.5rem;
+  border-width: 2px;
+  --tw-border-opacity: 1;
+  border-color: rgb(140 82 255 / var(--tw-border-opacity, 1));
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
   font-size: 0.875rem;
   line-height: 1.25rem;
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity, 1));
 }
 
-.mt-2 {
-  margin-top: 0.5rem;
+.btn-outline:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(140 82 255 / var(--tw-bg-opacity, 1));
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity, 1));
 }
 
-.bg-brand-gray {
-  --tw-bg-opacity: 1;
-  background-color: rgb(201 201 201 / var(--tw-bg-opacity, 1));
+.mt-2 {
+  margin-top: 0.5rem;
 }
 
 .bg-brand-purple {

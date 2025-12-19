@@ -10,11 +10,20 @@
 
 @layer components {
   .btn-primary {
-    @apply text-brand-white px-4 py-2 rounded-lg text-sm  ;
+    @apply text-brand-white px-4 py-2 rounded-lg text-sm;
   }
   .btn-secondary {
-    @apply text-brand-white px-12 py-8 rounded-sm text-sm  ;
+   /* Create a with secondary color. Add hover + focus states.*/
+    @apply text-brand-gray px-10 py-6 rounded-sm text-sm border-2 border-brand-gray;
   }
-
+  .btn-secondary:hover, .btn-secondary:focus {
+    @apply bg-brand-purple text-white;
+  }
+  .btn-outline {
+    @apply text-brand-white px-4 py-2 rounded-lg text-sm border-2 border-brand-purple;
+  }
+ .btn-outline:hover {
+  @apply bg-brand-purple text-white;
+ }
 
 }
