@@ -584,7 +584,7 @@ body {
   font-size: 0.875rem;
   line-height: 1.25rem;
   --tw-text-opacity: 1;
-  color: rgb(201 201 201 / var(--tw-text-opacity, 1));
+  color: rgb(45 45 45 / var(--tw-text-opacity, 1));
 }
 
 .btn-secondary:hover, .btn-secondary:focus {
@@ -649,7 +649,7 @@ body {
   line-height: 1.75rem;
   font-weight: 600;
   --tw-text-opacity: 1;
-  color: rgb(201 201 201 / var(--tw-text-opacity, 1));
+  color: rgb(45 45 45 / var(--tw-text-opacity, 1));
 }
 
 .info-card-body {
@@ -658,7 +658,7 @@ body {
   line-height: 1.5rem;
   font-weight: 400;
   --tw-text-opacity: 1;
-  color: rgb(201 201 201 / var(--tw-text-opacity, 1));
+  color: rgb(45 45 45 / var(--tw-text-opacity, 1));
 }
 
 .info-card-workspace {
@@ -678,9 +678,9 @@ body {
   margin-top: 0.5rem;
 }
 
-.bg-brand-charcoal {
+.bg-brand-aqua50 {
   --tw-bg-opacity: 1;
-  background-color: rgb(45 45 45 / var(--tw-bg-opacity, 1));
+  background-color: rgb(232 252 250 / var(--tw-bg-opacity, 1));
 }
 
 .bg-brand-purple {
@@ -742,27 +742,12 @@ body {
   color: rgb(40 105 226 / var(--tw-text-opacity, 1));
 }
 
-.text-brand-purple {
-  --tw-text-opacity: 1;
-  color: rgb(140 82 255 / var(--tw-text-opacity, 1));
-}
-
-.text-brand-purple50 {
-  --tw-text-opacity: 1;
-  color: rgb(239 232 252 / var(--tw-text-opacity, 1));
-}
-
-.text-white {
-  --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity, 1));
-}
-
 .text-brand-coral50 {
   --tw-text-opacity: 1;
   color: rgb(252 234 232 / var(--tw-text-opacity, 1));
 }
 
-.text-brand-violet50 {
+.text-white {
   --tw-text-opacity: 1;
-  color: rgb(246 235 249 / var(--tw-text-opacity, 1));
+  color: rgb(255 255 255 / var(--tw-text-opacity, 1));
 }
