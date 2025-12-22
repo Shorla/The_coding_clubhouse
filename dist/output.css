@@ -678,9 +678,9 @@ body {
   margin-top: 0.5rem;
 }
 
-.bg-brand-coral {
+.bg-brand-charcoal {
   --tw-bg-opacity: 1;
-  background-color: rgb(255 111 97 / var(--tw-bg-opacity, 1));
+  background-color: rgb(45 45 45 / var(--tw-bg-opacity, 1));
 }
 
 .bg-brand-purple {
@@ -739,10 +739,30 @@ body {
 
 .text-brand-blue {
   --tw-text-opacity: 1;
-  color: rgb(24 78 180 / var(--tw-text-opacity, 1));
+  color: rgb(40 105 226 / var(--tw-text-opacity, 1));
+}
+
+.text-brand-purple {
+  --tw-text-opacity: 1;
+  color: rgb(140 82 255 / var(--tw-text-opacity, 1));
+}
+
+.text-brand-purple50 {
+  --tw-text-opacity: 1;
+  color: rgb(239 232 252 / var(--tw-text-opacity, 1));
 }
 
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity, 1));
+}
+
+.text-brand-coral50 {
+  --tw-text-opacity: 1;
+  color: rgb(252 234 232 / var(--tw-text-opacity, 1));
+}
+
+.text-brand-violet50 {
+  --tw-text-opacity: 1;
+  color: rgb(246 235 249 / var(--tw-text-opacity, 1));
 }
