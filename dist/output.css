@@ -600,7 +600,7 @@ body {
   font-size: 0.875rem;
   line-height: 1.25rem;
   --tw-text-opacity: 1;
-  color: rgb(201 201 201 / var(--tw-text-opacity, 1));
+  color: rgb(45 45 45 / var(--tw-text-opacity, 1));
 }
 
 .btn-secondary:hover, .btn-secondary:focus {
@@ -665,7 +665,7 @@ body {
   line-height: 1.75rem;
   font-weight: 600;
   --tw-text-opacity: 1;
-  color: rgb(201 201 201 / var(--tw-text-opacity, 1));
+  color: rgb(45 45 45 / var(--tw-text-opacity, 1));
 }
 
 .info-card-body {
@@ -674,7 +674,7 @@ body {
   line-height: 1.5rem;
   font-weight: 400;
   --tw-text-opacity: 1;
-  color: rgb(201 201 201 / var(--tw-text-opacity, 1));
+  color: rgb(45 45 45 / var(--tw-text-opacity, 1));
 }
 
 .info-card-workspace {
@@ -694,9 +694,9 @@ body {
   margin-top: 0.5rem;
 }
 
-.bg-brand-coral {
+.bg-brand-aqua50 {
   --tw-bg-opacity: 1;
-  background-color: rgb(255 111 97 / var(--tw-bg-opacity, 1));
+  background-color: rgb(232 252 250 / var(--tw-bg-opacity, 1));
 }
 
 .bg-brand-purple {
@@ -764,7 +764,9 @@ body {
 }
 
 .text-brand-coral50 {
+.text-brand-coral50 {
   --tw-text-opacity: 1;
+  color: rgb(252 234 232 / var(--tw-text-opacity, 1));
   color: rgb(252 234 232 / var(--tw-text-opacity, 1));
 }
 

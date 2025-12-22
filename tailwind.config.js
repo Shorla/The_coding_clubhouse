@@ -11,7 +11,6 @@ module.exports = {
         brand: {
           purple: "#8C52FF", 
           purple50: "#EFE8FC",  
-          purple400: '#A273FF',
           violet: "#CF87E9",
           violet50: "#F6EBF9",
           blue: "#2869E2", 
@@ -19,7 +18,9 @@ module.exports = {
           yellow: "#FFD447",  
           yellow50: "#FCF8E8",  
           aqua: "#00C2A8",
+          aqua: "#00C2A8",
           aqua50: "#E8FCFA",
+          coral: "#FF6F61", 
           coral: "#FF6F61", 
           coral50: "#FCEAE8",
           gray: "#C9C9C9",

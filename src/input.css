@@ -14,7 +14,7 @@
   }
   .btn-secondary {
    /* Create a with secondary color. Add hover + focus states.*/
-    @apply text-brand-gray px-10 py-6 rounded-md text-sm border-2 border-brand-gray;
+    @apply text-brand-charcoal px-10 py-6 rounded-md text-sm border-2 border-brand-gray;
   }
   .btn-secondary:hover, .btn-secondary:focus {
     @apply bg-brand-purple text-white;
@@ -32,10 +32,10 @@
   @apply px-6 py-4 shadow-md rounded-xl max-w-[350px] min-h-[550px] w-full;
  }
 .info-card-title {
-  @apply text-xl font-semibold mt-2 mb-4  text-left text-brand-gray px-1 py-1;
+  @apply text-xl font-semibold mt-2 mb-4  text-left text-brand-charcoal px-1 py-1;
 }
  .info-card-body {
-    @apply text-base font-normal text-left text-brand-gray;
+    @apply text-base font-normal text-left text-brand-charcoal;
   }
   .info-card-workspace {
     @apply w-full h-full mt-4 rounded-md;
