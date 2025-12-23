@@ -43,4 +43,19 @@
   .info-card-frame {
     @apply w-20 h-10 mt-1 ;
   }
+  .blog-news-card {
+    @apply px-4 py-5 shadow-md rounded-xl max-w-[500px] w-full;
+  }
+  .blog-news-card-workspace {
+    @apply w-full h-48 mt-4 mb-1 rounded-md;
+  } 
+  .blog-news-card-header {
+    @apply flex items-center gap-2 ;
+  }
+  .blog-news-card-frame {
+    @apply w-10 h-2 m-1 ;
+  } 
+  .blog-news-card-title {
+    @apply text-sm font-semibold  text-left text-brand-gray ;
+  }
 }
