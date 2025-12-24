@@ -53,7 +53,7 @@
     @apply flex items-center gap-2 ;
   }
   .blog-news-card-frame {
-    @apply w-10 h-2 m-1 ;
+    @apply w-8 h-2 m-1 ;
   } 
   .blog-news-card-title {
     @apply text-sm font-semibold  text-left text-brand-gray ;
