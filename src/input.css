@@ -12,6 +12,8 @@
   .btn-primary {
     @apply text-brand-white px-4 py-2 rounded-lg text-sm  ;
   }
-
+  .btn-secondary {
+    @apply text-brand-yellow px-4 py-2 rounded-lg text-sm;
+  }
 
 }
