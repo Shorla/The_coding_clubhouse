@@ -3,15 +3,43 @@
 @tailwind utilities;
 
 @layer base {
-  body{
-    @apply bg-brand-white
+  body {
+    @apply bg-white;
   }
 }
 
 @layer components {
   .btn-primary {
-    @apply text-brand-white px-4 py-2 rounded-lg text-sm  ;
+    @apply text-white px-4 py-2 rounded-lg text-sm;
   }
 
+  .profile-card {
+    @apply w-full max-w-sm flex flex-col items-center
+      rounded-xl border-2
+      pt-6 pb-6 px-5
+      text-center shadow-sm
+      bg-[#EAF0FA] border-slate-300;
+  }
 
+  .profile-card__avatar-wrap {
+    @apply w-32 h-32 rounded-full bg-white p-1.5 shadow-md;
+  }
+
+  .profile-card__avatar {
+    @apply w-full h-full rounded-full object-cover block;
+  }
+
+  .profile-card__name {
+    @apply mt-6  text-2xl font-semibold text-slate-800;
+    
+  }
+
+  .profile-card__role {
+    @apply mt-2  text-[18px] font-extrabold leading-relaxed text-[#184EB4];
+    
+  }
+
+  .profile-card__bio {
+    @apply mt-6  text-lg font-medium leading-relaxed text-[#2D2D2D] text-justify;
+  }
 }
