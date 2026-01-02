@@ -9,7 +9,13 @@
 }
 
 @layer components {
-  .btn-primary {
+  .golden-btn{
+    @apply bg-brand-yellow hover:bg-brand-white text-center font-bold text-black hover:text-black p-2 rounded transition ease-out duration-300
+  }
+  .card-bg{
+    @apply mx-20 mt-30 mb-2 w-auto h-auto shadow-xl rounded-lg bg-brand-purple bg-no-repeat bg-cover text-center justify-center bg-blend-soft-light hover:bg-blend-darken transition ease-out duration-500
+  }
+  .btn-primary {                                                                              
     @apply text-brand-white px-4 py-2 rounded-lg text-sm;
   }
   .btn-secondary {
