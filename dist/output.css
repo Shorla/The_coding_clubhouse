@@ -716,8 +716,51 @@ body {
   color: rgb(201 201 201 / var(--tw-text-opacity, 1));
 }
 
+.girls-card {
+  height: 388px;
+  width: 604px;
+  overflow: hidden;
+  border-radius: 1rem;
+  --tw-bg-opacity: 1;
+  background-color: rgb(162 115 255 / var(--tw-bg-opacity, 1));
+}
+
+.camera-pic {
+  height: 33px;
+  width: 83px;
+  padding-top: 2px;
+  padding-bottom: 1px;
+}
+
+.girls-pic {
+  height: 315px;
+  width: 604px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.girls-top {
+  display: flex;
+  height: 73px;
+  width: 604px;
+  align-items: flex-start;
+  gap: 10px;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  padding-top: 20px;
+}
+
+.ml-8 {
+  margin-left: 2rem;
+}
+
 .mt-2 {
   margin-top: 0.5rem;
+}
+
+.scale-x-\[-1\] {
+  --tw-scale-x: -1;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
 .bg-brand-aqua50 {

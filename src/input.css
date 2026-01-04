@@ -58,4 +58,16 @@
   .blog-news-card-title {
     @apply text-sm font-semibold  text-left text-brand-gray ;
   }
+  .girls-card {
+  @apply w-[604px] h-[388px] bg-[#A273FF]  rounded-2xl overflow-hidden ;
+}
+  .camera-pic {
+    @apply w-[83px] h-[33px] pt-[2px] pb-[1px];
+  }
+  .girls-pic {
+    @apply w-[604px] h-[315px]  object-cover;
+  }
+  .girls-top {
+    @apply h-[73px] w-[604px] flex items-start gap-[10px] px-3 pt-[20px];
+  }
 }
