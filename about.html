@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NGO Website</title>
+    <link rel="stylesheet" href="/dist/output.css">
+</head>
+<body class="">
+
+  <!-------------------
+  Navbar Begins
+  --------------------->
+  <header>
+  <nav class="bg-brand-purple text-brand-white p-2 w-full h-auto flex justify-between text-center fixed m-0 top-0">
+    <a href="home.html"><img class="w-32" src="/assets/Frame 2.png" alt="NGO Logo" srcset=""></a>
+   
+    <!--Hamburger-->
+    <div class="px-4 mt-1 cursor-pointer md:hidden " id="">
+      <svg class="w-10" sxmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+      </svg>
+    </div>
+         
+    <!--Links to webpages-->
+    <ul class="text-xs lg:text-sm font-sans font-bold hidden px-2 py-2 mr-4 md:flex gap-2 lg:gap-4" id="menu">
+      <li class="mt-2">
+        <a href="/about.html" class="text-center hover:text-brand-white text-brand-yellow">About Us</a>
+      </li>
+      <li class="">
+        <a href="#" class="text-center p-2 flex gap-1 hover:text-brand-yellow">
+          Programs
+
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="size-4">
+            <path fill-rule="evenodd" d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
+          </svg>
+        </a>
+      </li>
+      <li class="mt-2">
+        <a href="#" class="text-center p-2 hover:text-brand-yellow">Resources</a>
+      </li>
+      <li class="mt-2">
+        <a href="#" class="text-center p-2 hover:text-brand-yellow">Get Involved</a>
+      </li>
+
+      <li>
+        <a href="#" class="golden-btn flex gap-1">
+          <svg class="w-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z" />
+          </svg>
+
+          Donate
+        </a>
+      </li>
+
+      <li class="mt-2">
+        <a href="#" class="white-btn">Contact Us</a>
+      </li>
+    </ul>
+
+  </nav>
+</header>
+
+  <!-----------------------
+  NavBar Ends
+  ------------------------>
+
+
+<!------------------------
+ Hero Section
+ ------------------------>
+<main class="hero-bg bg-cover h-[700px]" style="background-image: url(/assets/focused-workspace.jpg)">
+
+  <!--small code snippets on the bg-->
+  <div class="flex justify-between md:mx-20 pt-36 mb-12">
+    <span class="code-texts-aqua">print ("Hello World!")</span>
+  </div>
+
+  <!--Texts-->
+  <div class="pt-8">
+    <h1 class="hero-h1 ">We&apos;re Coding Clubhouse.</h1>
+      <p class="hero-p">Making computer science  
+        <span class="font-bold text-brand-yellow">accessible</span>,
+        <span class="font-bold text-brand-aqua">inclusive</span>, and
+        <span class="font-bold text-brand-coral">joyful</span> <br>
+        for every child.
+      </p>
+
+    <!--small code snippet-->
+    <span class="code-texts-purple absolute right-6">while (learning) smile();</span>
+    <span class="text-brand-white absolute mt-28 tracking-wider font-extralight text-xs">function learn[ ] { </span>
+  </div>
+</main>
+<!------------------------
+ Hero Section Ends
+ ------------------------>
+
+
+ <!------------------------
+ Card Section Begins
+ ------------------------>
+<section class="mt-10 text-center">
+  <!-- heart, html tag, and fire emoji-->
+  <span class="flex justify-center text-brand-blue">
+    <svg class="w-5 text-brand-coral pr-1" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z" />
+    </svg>
+      &lt;&sol;&gt;  <!-- for the html tags -->
+    <svg class="w-5 pl-1 text-brand-yellow" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M15.59 14.37a6 6 0 0 1-5.84 7.38v-4.8m5.84-2.58a14.98 14.98 0 0 0 6.16-12.12A14.98 14.98 0 0 0 9.631 8.41m5.96 5.96a14.926 14.926 0 0 1-5.841 2.58m-.119-8.54a6 6 0 0 0-7.381 5.84h4.8m2.581-5.84a14.927 14.927 0 0 0-2.58 5.84m2.699 2.7c-.103.021-.207.041-.311.06a15.09 15.09 0 0 1-2.448-2.448 14.9 14.9 0 0 1 .06-.312m-2.24 2.39a4.493 4.493 0 0 0-1.757 4.306 4.493 4.493 0 0 0 4.306-1.758M16.5 9a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0Z" />
+    </svg>
+  </span>
+  
+  <!--  -->
+  <h1 class="hero-h1 text-brand-purple mt-4">Who We Are</h1>
+
+  <!-- small circle shape in the bg -->
+  <div class="circle mx-8 md:ml-60"></div>
+
+  <!-- content -->
+  <div class="cards">
+    <div class="md:w-1/2 lg:my-20">
+      <div class="border-l-4 border-brand-purple">
+        <p class="pl-4 mb-4">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsum provident mollitia tempora, culpa esse sunt adipisci id delectus reiciendis est animi voluptatibus, molestias repellat voluptatum, similique iure. Molestiae, quisquam eligendi!</p>
+        <p class="pl-4 mb-8">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus sed nesciunt quidem rem cumque perspiciatis. Soluta, fuga neque possimus doloremque quibusdam quae, veniam pariatur, asperiores quasi nesciunt iure facere velit!</p>
+      </div>
+    </div>
+
+    <!-- card -->
+    <div class="p-5 block shadow-2xl rounded-xl md:w-1/2 max-h-fit"> 
+      <span class="">
+        <img class="pb-4" src="/assets/web tab.png" alt="">
+        <img src="/assets/blog-news-Coding workspace.png" alt="">
+      </span>
+
+      <div class="grid grid-cols-2 gap-2 py-4">
+        <span class="grid-style bg-brand-aqua50 p-2">
+          lorem ipsum
+        </span>
+
+        <span class="grid-style bg-orange-100 p-2">
+          lorem ipsum
+        </span>
+
+        <span class="grid-style bg-brand-violet50 p-2">
+          lorem ipsum
+        </span>
+
+        <span class="grid-style bg-yellow-100 p-2">
+          lorem ipsum
+        </span>
+      </div>
+    </div>
+  </div> 
+</section>
+<!------------------------
+ Card Section Ends
+ ------------------------>
+
+<!------------------------
+ Info Section Begins
+ ------------------------>
+<section class="w-full h-500 mb-10 p-10 bg-gradient">
+
+</section>
+
+
+ <!------------------------
+ Info Section Ends
+ ------------------------>
+
+
+<!--------------------------
+  Expand our Impact Section
+--------------------------->
+  <section>
+    <div class="card-bg text-center pt-5 md:py-12 px-2" style="background-image: url(/assets/blocks.jpg)">
+      <h1 class="font-bold md:text-3xl text-xl text-brand-charcoal font-heading tracking-wide">
+        Want to help us expand our impact?
+      </h1>
+
+      <div class="grid md:flex justify-center pb-4 mt-5 md:mt-8 text-brand-charcoal">
+        <button class="golden-btn md:m-4"><a href="#">Become a Volunteer</a></button>
+        <button class="golden-btn mt-2 md:m-4"><a href="#">Partner with Us</a></button> 
+        <span class="white-btn md:m-4">
+          <a href="#" class="flex gap-1">
+            <svg class="w-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z" />
+            </svg>
+            Donate
+          </a>
+        </span>
+      </div>
+    </div>
+    <span class="text-right text-sm flex justify-end text-brand-blue mb-10">function thecodeclubh</span>
+  </section>
+
+
+
+<!-------------------------
+  Footer Begins
+------------------------->
+
+<!--Link to webpages-->
+  <footer class="bg-brand-white w-full px-10 pt-20 text-center text-brand-charcoal">
+    <div class="justify-center md:grid lg:flex lg:gap-4 lg:justify-evenly">
+
+     <a href="home.html" class="flex justify-center md:w-32 h-14"> <img class="w-32 h-auto" src="/assets/Frame 2 (1).png" alt="NGO Logo" srcset=""></a>
+
+      <ul  class="grid md:flex justify-evenly gap-5 text-sm text-center font-bold px-5 pt-5">
+        <li class="p-2">
+          <a href="/about.html" class="hover:text-brand-yellow">About Us</a>
+        </li>
+        <li class="p-2">
+          <a href="#" class="hover:text-brand-yellow">Programs</a>
+        </li>
+        <li class="p-2">
+          <a href="#" class="hover:text-brand-yellow">Volunteer</a>
+        </li>
+        <li class="p-2">
+          <a href="#" class="hover:text-brand-yellow">Donate</a>
+        </li>
+        <li class="p-2">
+          <a href="#" class="hover:text-brand-yellow">Contact Us</a>
+        </li>
+      </ul>
+
+<!--Social Media Icons-->
+      <ul class="justify-around mt-6 md:mt-2 flex gap-10 px-5 md:col-span-3 md:py-4">
+        <li>
+          <a href="#" >
+            <svg class="w-6 h-auto mr-4 text-brand-purple hover:text-brand-yellow" xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 24 24">
+                <path fill="currentColor" d="M12 6.865A5.135 5.135 0 1 0 17.135 12A5.135 5.135 0 0 0 12 6.865Zm0 8.469A3.334 3.334 0 1 1 15.334 12A3.333 3.333 0 0 1 12 15.334Z"/>
+                <path fill="currentColor" d="M21.94 7.877a7.333 7.333 0 0 0-.465-2.427a4.918 4.918 0 0 0-1.153-1.772a4.894 4.894 0 0 0-1.77-1.153a7.323 7.323 0 0 0-2.428-.464C15.058 2.012 14.717 2 12.001 2s-3.057.011-4.123.06a7.333 7.333 0 0 0-2.428.465a4.905 4.905 0 0 0-1.77 1.153A4.886 4.886 0 0 0 2.525 5.45a7.333 7.333 0 0 0-.464 2.427c-.05 1.066-.06 1.407-.06 4.123s.01 3.057.06 4.123a7.334 7.334 0 0 0 .464 2.427a4.888 4.888 0 0 0 1.154 1.772a4.917 4.917 0 0 0 1.771 1.153a7.338 7.338 0 0 0 2.428.464C8.944 21.988 9.285 22 12 22s3.057-.011 4.123-.06a7.333 7.333 0 0 0 2.427-.465a5.113 5.113 0 0 0 2.925-2.925a7.316 7.316 0 0 0 .465-2.427c.048-1.067.06-1.407.06-4.123s-.012-3.057-.06-4.123Zm-1.8 8.164a5.549 5.549 0 0 1-.343 1.857a3.311 3.311 0 0 1-1.898 1.898a5.522 5.522 0 0 1-1.857.344c-1.055.048-1.371.058-4.042.058s-2.986-.01-4.04-.058a5.526 5.526 0 0 1-1.857-.344a3.108 3.108 0 0 1-1.15-.748a3.085 3.085 0 0 1-.748-1.15a5.521 5.521 0 0 1-.344-1.857c-.048-1.054-.058-1.37-.058-4.04s.01-2.987.058-4.042a5.563 5.563 0 0 1 .344-1.857a3.107 3.107 0 0 1 .748-1.15a3.082 3.082 0 0 1 1.15-.748A5.523 5.523 0 0 1 7.96 3.86C9.014 3.81 9.331 3.8 12 3.8s2.987.011 4.042.059a5.564 5.564 0 0 1 1.857.344a3.31 3.31 0 0 1 1.898 1.898a5.523 5.523 0 0 1 .344 1.857c.048 1.055.058 1.37.058 4.041s-.01 2.986-.058 4.041ZM17.339 5.462Z"/>
+            </svg>
+          </a>
+        </li>
+
+        <li>
+          <a href="#"><svg class="w-6 h-auto mr-4 text-brand-purple hover:text-brand-yellow" xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 24 24">
+              <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 2h-3a5 5 0 0 0-5 5v3H6v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3V2Z"/>
+          </svg></a>
+        </li>
+
+        <li>
+          <a href="#">
+            <svg class="w-6 h-auto mr-4 text-brand-purple hover:text-brand-yellow" xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 16 16">
+              <path fill="currentColor" d="M9.294 6.928L14.357 1h-1.2L8.762 6.147L5.25 1H1.2l5.31 7.784L1.2 15h1.2l4.642-5.436L10.751 15h4.05L9.294 6.928ZM7.651 8.852l-.538-.775L2.832 1.91h1.843l3.454 4.977l.538.775l4.491 6.47h-1.843l-3.664-5.28Z"/>
+          </svg>
+          </a>
+        </li>
+
+        <li>
+          <a href="#">
+            <svg class="w-6 h-auto text-brand-purple hover:text-brand-yellow" xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 24 24">
+                <path fill="currentColor" d="m14.792 10.775l-3.668-2.112A1.417 1.417 0 0 0 9 9.89v4.222c-.003.506.267.974.706 1.224a1.41 1.41 0 0 0 1.419.002l3.667-2.112a1.413 1.413 0 0 0 0-2.45zm-.5 1.582l-3.666 2.113a.414.414 0 0 1-.419 0a.408.408 0 0 1-.207-.36V9.89a.408.408 0 0 1 .207-.359a.402.402 0 0 1 .418 0l3.667 2.113a.41.41 0 0 1 0 .714zM19 4H5a3.003 3.003 0 0 0-3 3v10a3.003 3.003 0 0 0 3 3h14a3.003 3.003 0 0 0 3-3V7a3.003 3.003 0 0 0-3-3zm2 13a2.003 2.003 0 0 1-2 2H5a2.003 2.003 0 0 1-2-2V7a2.003 2.003 0 0 1 2-2h14a2.003 2.003 0 0 1 2 2v10z"/>
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <!--Newsletter Subscription-->
+    <div class="block md:flex lg:ml-5 my-10 justify-center">
+      <h3 class="font-bold text-sm tracking-wider mb-2 mr-6">Newsletter</h3>
+      <span class="mx-2 text-gray-500">Get updates about our events and classes.</span>
+      <input type="text" name="email" class="btn-secondary h-10 mt-5 md:mt-0 mr-2 mb-6 md:mb-0" placeholder="Email Address">
+      <button class="golden-btn hover:bg-brand-purple hover:text-brand-white text-center">Subscribe Now</button>
+    </div>
+
+    <!--Copyright-->
+    <span class="text-center text-gray-400 text-sm pb-10 pt-5">&copy; 2026 Coding Clubhouse. All rights reserved.</span>
+
+    <!--Footer Ends-->
+  </footer>
+</body>
+</html>
