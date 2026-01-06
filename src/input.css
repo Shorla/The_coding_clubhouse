@@ -58,4 +58,7 @@
   .blog-news-card-title {
     @apply text-sm font-semibold  text-left text-brand-gray ;
   }
+  .circular-images {
+    @apply max-w-[70px] max-h-[70px] rounded-full  ;
+  }
 }
