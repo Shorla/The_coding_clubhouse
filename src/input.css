@@ -6,10 +6,81 @@
   body{
     @apply bg-brand-white
   }
+
+  /* importing the fonts from the font folder in order to make them effective*/
+ @font-face {
+    font-family: 'Nunito';
+    src: url('/fonts/Nunito-Regular.woff2') format('woff2'),
+         url('/fonts/Nunito-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+  }
+   @font-face {
+    font-family: 'Poppins';
+    src: url('/fonts/Poppins-SemiBold.woff2') format('woff2'),
+         url('/fonts/Poppins-SemiBold.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+  }
 }
 
 @layer components {
-  .btn-primary {
+ 
+  /*for the hero sections*/
+  .hero-bg{
+    @apply w-full h-auto font-sans text-brand-white text-center bg-no-repeat bg-cover bg-brand-purple bg-blend-darken
+  }
+  .hero-h1{
+    @apply font-heading text-4xl md:mt-16
+  }
+  .hero-p{
+    @apply font-sans p-5 text-2xl
+  }
+  
+  /*for the tiny lines of codes*/
+  .code-texts-yellow {
+    @apply p-2 text-xs bg-brand-yellow50 text-brand-yellow rounded relative bg-opacity-20
+  }
+  .code-texts-aqua {
+    @apply p-2 text-xs ml-2 bg-brand-aqua50 text-brand-aqua rounded relative bg-opacity-20
+  }
+  .code-texts-coral {
+  @apply p-2 text-xs bg-brand-coral50 text-brand-coral rounded relative bg-opacity-20
+ }
+  .code-texts-purple {
+   @apply p-2 text-xs bg-brand-purple text-brand-purple50 rounded relative bg-opacity-50
+  }
+  .code-texts-blue {
+   @apply p-2 text-xs bg-brand-blue50 text-brand-blue rounded relative bg-opacity-20
+  }
+
+  /* cards section */
+  .workspace-bg {
+  @apply my-5 w-[314px] h-[130px] p-2 rounded-xl bg-brand-charcoal
+  }
+  .grid-style {
+    @apply border-2 border-brand-gray p-2 rounded flex gap-2
+  }
+  .cards{
+    @apply m-10 mt-2 text-brand-charcoal text-left block md:flex gap-8
+  }
+  .card-bg{
+    @apply mx-8 md:mx-20 mt-20 mb-2 w-auto h-auto shadow-xl rounded-lg bg-brand-purple bg-no-repeat bg-cover text-center justify-center bg-blend-soft-light hover:bg-blend-darken transition ease-out duration-500
+  }
+  .circle{
+    @apply w-16 h-16 rounded-full bg-brand-purple50
+  }
+
+
+  /*Buttons*/   
+  .golden-btn{
+    @apply bg-brand-yellow hover:bg-brand-white text-center text-black p-2 rounded transition ease-out duration-300
+  }
+  .white-btn{
+    @apply bg-brand-white hover:bg-brand-yellow text-center text-black p-2 m-2 rounded transition ease-out duration-300
+  }
+  
+  .btn-primary {                                                                              
     @apply text-brand-white px-4 py-2 rounded-lg text-sm;
   }
   .btn-secondary {
