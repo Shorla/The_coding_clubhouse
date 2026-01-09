@@ -68,6 +68,18 @@
   } 
   .blog-news-card-title {
     @apply text-sm font-semibold  text-left text-brand-gray ;
+  } 
+  .small-section-header {
+    @apply flex flex-col items-center  ; 
+  }
+  .small-section-header-title {
+     @apply text-4xl font-heading font-semibold text-brand-blue flex items-center gap-2
+  }
+  .small-section-header-subTitle {
+    @apply text-lg font-sans text-brand-charcoal mt-4 max-w-3xl text-center
+  }
+  .small-section-header-icon {
+    @apply w-8 h-8 mb-2
   }
   .circular-images {
     @apply max-w-[70px] max-h-[70px] rounded-full  ;
