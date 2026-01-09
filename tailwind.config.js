@@ -11,6 +11,7 @@ module.exports = {
         brand: {
           purple: "#8C52FF", 
           purple50: "#EFE8FC",  
+          purple400: '#A273FF',
           violet: "#CF87E9",
           violet50: "#F6EBF9",
           blue: "#2869E2", 
