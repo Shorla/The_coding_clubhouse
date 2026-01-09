@@ -559,6 +559,22 @@ body {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
 }
 
+@font-face {
+  font-family: "Nunito";
+
+  src: url("/fonts/Nunito-Regular.ttf") format("truetype");
+
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Poppins";
+
+  src: url("/fonts/Poppins-Bold.ttf") format("truetype");
+
+  font-weight: 700;
+}
+
 .btn-primary {
   border-radius: 0.5rem;
   padding-left: 1rem;
