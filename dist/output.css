@@ -749,6 +749,14 @@ body {
   margin-bottom: 0.5rem;
   height: 2rem;
   width: 2rem;
+/* .circular-image-container {
+    @apply relative bg-brand-coral max-w-[120px] py-12 flex items-center justify-center  ;
+  } */
+
+.circular-images {
+  max-height: 70px;
+  max-width: 70px;
+  border-radius: 9999px;
 }
 
 .mt-2 {
