@@ -776,6 +776,8 @@ body {
 .blog-news-card {
   padding-left: 1.75rem;
   padding-right: 1.75rem;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
 }
 
 .mt-2 {
