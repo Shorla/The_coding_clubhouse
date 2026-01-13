@@ -1,42 +1,56 @@
-name: Soft Warning - Utilities.md Check
+name: Soft Warning - Utilities.md Inline Check (Multi-line)
 
-# Trigger on pushes to any branch
 on:
-  push:
-    branches:
-      - '**'  # all branches
   pull_request:
-    branches:
-      - '**'  # optional, also triggers on PRs
+    types: [opened, synchronize, reopened]
 
 jobs:
-  check-utilities:
+  check-utilities-multiline:
     runs-on: ubuntu-latest
-
     steps:
-      # 1️⃣ Checkout code with full history
       - uses: actions/checkout@v3
-        with:
-          fetch-depth: 0
 
-      # 2️⃣ Check if input.css changed without updating utilities.md
-      - name: Check input.css and utilities.md
+      - name: Get changed lines in input.css
+        id: changed-lines
         run: |
-          # Determine a safe base commit
-          BASE=$(git rev-parse ${{ github.event.before }} 2>/dev/null || git rev-parse HEAD~1)
+          BASE_SHA=$(jq -r .pull_request.base.sha < "$GITHUB_EVENT_PATH")
+          HEAD_SHA=$(jq -r .pull_request.head.sha < "$GITHUB_EVENT_PATH")
 
-          # Get list of changed files between base and current commit
-          CHANGED_FILES=$(git diff --name-only $BASE ${{ github.sha }})
+          # Get all changed lines in input.css
+          # --unified=0 shows only changed lines without context
+          DIFF_LINES=$(git diff $BASE_SHA $HEAD_SHA --unified=0 src/input.css | \
+            grep '^@@' | sed -E 's/@@ -[0-9,]+ \+([0-9]+)(,[0-9]+)? @@/\1/')
 
-          # Check if input.css was modified
-          if echo "$CHANGED_FILES" | grep -q "src/input.css"; then
-            echo "input.css was modified"
-            
-            # Check if utilities.md was also updated
-            if ! echo "$CHANGED_FILES" | grep -q "docs/utilities.md"; then
-              echo "::warning file=docs/utilities.md,line=1::⚠️ You updated input.css but not utilities.md"
-            fi
+          # Save lines as array
+          echo "changed_lines=$DIFF_LINES" >> $GITHUB_OUTPUT
+          echo "Changed lines: $DIFF_LINES"
+
+      - name: Check if utilities.md updated
+        id: check-utilities
+        run: |
+          BASE_SHA=$(jq -r .pull_request.base.sha < "$GITHUB_EVENT_PATH")
+          HEAD_SHA=$(jq -r .pull_request.head.sha < "$GITHUB_EVENT_PATH")
+
+          if ! git diff --name-only $BASE_SHA $HEAD_SHA | grep -q "docs/utilities.md"; then
+            echo "missing_utilities=true" >> $GITHUB_OUTPUT
           else
-            echo "No input.css changes"
+            echo "missing_utilities=false" >> $GITHUB_OUTPUT
           fi
-        shell: bash
+
+      - name: Post inline comments for each changed line
+        if: steps.check-utilities.outputs.missing_utilities == 'true'
+        run: |
+          token="${{ secrets.GITHUB_TOKEN }}"
+          pr_number="${{ github.event.pull_request.number }}"
+          file_path="src/input.css"
+
+          for line in ${{ steps.changed-lines.outputs.changed_lines }}; do
+            curl -s -X POST \
+              -H "Authorization: token $token" \
+              -H "Accept: application/vnd.github.v3+json" \
+              https://api.github.com/repos/${{ github.repository }}/pulls/$pr_number/comments \
+              -d "$(jq -n --arg body "⚠️ You updated input.css but did **not** update docs/utilities.md. Please document your new classes." \
+                        --arg path "$file_path" \
+                        --argjson line $line \
+                        '{body: $body, path: $path, line: $line, side: "RIGHT"}')"
+          done
