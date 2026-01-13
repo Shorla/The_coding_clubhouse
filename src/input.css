@@ -82,6 +82,9 @@
     @apply w-8 h-8 mb-2
   }
   .circular-images {
-    @apply max-w-[70px] max-h-[70px] rounded-full px-5 ;
+    @apply max-w-[70px] max-h-[70px] rounded-full;
+  }
+  .blog-news-card {
+    @apply px-7
   }
 }

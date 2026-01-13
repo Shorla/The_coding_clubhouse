@@ -771,8 +771,11 @@ body {
   max-height: 70px;
   max-width: 70px;
   border-radius: 9999px;
-  padding-left: 1.25rem;
-  padding-right: 1.25rem;
+}
+
+.blog-news-card {
+  padding-left: 1.75rem;
+  padding-right: 1.75rem;
 }
 
 .mt-2 {
