@@ -85,6 +85,6 @@
     @apply max-w-[70px] max-h-[70px] rounded-full;
   }
   .blog-news-card {
-    @apply px-7 py-12 mx-21;
+    @apply px-7 py-12 mx-21 bg-brand-charcoal;
   }
 }
