@@ -1,46 +1,48 @@
-name: Soft Warning - utilities.md Check
+name: Soft Warning - Utilities.md Check
 
+# Trigger only on pull requests
 on:
   pull_request:
     branches:
-      - '**'  # all PRs
+      - '**'  # all branches
 
 jobs:
-  utilities-check:
+  utilities-warning:
     runs-on: ubuntu-latest
     steps:
+      # Step 1: Checkout the code
+      - uses: actions/checkout@v3
 
-      # 1️⃣ Checkout full repo history
-      - name: Checkout code
-        uses: actions/checkout@v3
-        with:
-          fetch-depth: 0  # important for PR file checks
-
-      # 2️⃣ Get list of changed files in the PR
-      - name: Get changed files
+      # Step 2: Get all changed files in the PR
+      - name: Get list of changed files
         id: changed-files
-        uses: tj-actions/changed-files@v34
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-
-      # 3️⃣ Show changed files (optional, for debugging)
-      - name: Debug changed files
         run: |
-          echo "All changed files: ${{ steps.changed-files.outputs.all_changed_files }}"
-          echo "Modified files: ${{ steps.changed-files.outputs.modified_files }}"
+          # Fetch the base branch
+          git fetch origin ${{ github.base_ref }}
+          # Get list of changed files between base and head
+          FILES=$(git diff --name-only origin/${{ github.base_ref }} HEAD)
+          echo "all_changed_files=$FILES" >> $GITHUB_OUTPUT
 
-      # 4️⃣ Post warning if input.css changed but utilities.md not updated
-      - name: Post PR warning
-        if: |
-          contains(steps.changed-files.outputs.all_changed_files, 'src/input.css') &&
-          !contains(steps.changed-files.outputs.all_changed_files, 'docs/utilities.md')
+      # Step 3: Post a soft warning comment if needed
+      - name: Post PR warning if utilities.md not updated
         uses: actions/github-script@v7
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           script: |
-            github.issues.createComment({
-              issue_number: context.issue.number,
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              body: "⚠️ **Soft Warning:** input.css was updated but docs/utilities.md was not. Please update utilities.md."
-            })
+            const changedFiles = `${{ steps.changed-files.outputs.all_changed_files }}`.split('\n');
+            
+            if (changedFiles.includes('src/input.css') && !changedFiles.includes('docs/utilities.md')) {
+              const prNumber = context.payload.pull_request?.number;
+              if (!prNumber) {
+                console.log("⚠️ Not a PR event, skipping comment.");
+              } else {
+                github.issues.createComment({
+                  owner: context.repo.owner,
+                  repo: context.repo.repo,
+                  issue_number: prNumber,
+                  body: "⚠️ **Soft Warning:** input.css was updated but docs/utilities.md was not. Please update utilities.md."
+                });
+              }
+            } else {
+              console.log("✅ No warning needed.");
+            }
