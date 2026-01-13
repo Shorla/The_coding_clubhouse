@@ -1,48 +1,49 @@
 name: Soft Warning - Utilities.md Check
 
-# Trigger on pull request
 on:
   pull_request:
     branches:
-      - '**'
+      - '**'  # all branches
 
 jobs:
-  utilities-warning:
+  check-utilities:
     runs-on: ubuntu-latest
-
     steps:
-      # Checkout the repo
       - uses: actions/checkout@v3
 
-      # Get list of changed files in the PR
       - name: Get changed files
         id: changed-files
         run: |
-          echo "CHANGED_FILES<<EOF" >> $GITHUB_OUTPUT
+          # Fetch the base branch to ensure we have a proper merge base
           git fetch origin ${{ github.base_ref }}
-          git diff --name-only origin/${{ github.base_ref }}...${{ github.sha }} >> $GITHUB_OUTPUT
-          echo "EOF" >> $GITHUB_OUTPUT
+          # Try diff with merge base; fallback to HEAD~1 if fails
+          CHANGED=$(git diff --name-only origin/${{ github.base_ref }}...HEAD || git diff --name-only HEAD~1 HEAD)
+          echo "CHANGED_FILES=$CHANGED" >> $GITHUB_OUTPUT
 
-      # Check for input.css changes and utilities.md
-      - name: Check input.css and utilities.md
-        id: check-files
+      - name: Check input.css vs utilities.md
+        id: check
         run: |
           if echo "${{ steps.changed-files.outputs.CHANGED_FILES }}" | grep -q "src/input.css"; then
+            echo "input.css was modified"
             if ! echo "${{ steps.changed-files.outputs.CHANGED_FILES }}" | grep -q "docs/utilities.md"; then
-              echo "warning_needed=true" >> $GITHUB_ENV
+              echo "utilities.md was NOT updated"
+              echo "warning=true" >> $GITHUB_OUTPUT
             else
-              echo "warning_needed=false" >> $GITHUB_ENV
+              echo "utilities.md updated"
+              echo "warning=false" >> $GITHUB_OUTPUT
             fi
           else
-            echo "warning_needed=false" >> $GITHUB_ENV
+            echo "No input.css changes"
+            echo "warning=false" >> $GITHUB_OUTPUT
 
-      # Post comment if warning is needed
-      - name: Post PR comment
-        if: env.warning_needed == 'true'
+      - name: Post PR comment if utilities.md missing
+        if: steps.check.outputs.warning == 'true'
         uses: peter-evans/create-or-update-comment@v4
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
+          repository: ${{ github.repository }}
           issue-number: ${{ github.event.pull_request.number }}
           body: |
-            ⚠️ **Soft Warning:** You updated `src/input.css` but did not update `docs/utilities.md`.  
-            Please fill out the utilities.md for any new or modified classes. This is just a reminder and **will not block merging**.
+            ⚠️ **Soft Warning**  
+            You modified `src/input.css` but did **not** update `docs/utilities.md`.  
+            Please update it to document your changes so other developers can reference the new utilities.
