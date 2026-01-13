@@ -9,7 +9,64 @@ jobs:
   check-utilities:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v3name: Soft Warning - Utilities.md Check
+
+on:
+  pull_request:
+    branches:
+      - '**'
+
+jobs:
+  check-utilities:
+    runs-on: ubuntu-latest
+    steps:
       - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0  # Fetch full history so merge base works
+
+      - name: Get changed files safely
+        id: changed-files
+        run: |
+          # Try to get merge base diff
+          BASE=$(git merge-base origin/${{ github.base_ref }} HEAD 2>/dev/null || echo "")
+          if [ -z "$BASE" ]; then
+            echo "No merge base found, falling back to last commit"
+            BASE="HEAD~1"
+          fi
+          echo "Using base: $BASE"
+
+          # Get list of changed files
+          CHANGED=$(git diff --name-only $BASE HEAD)
+          echo "CHANGED_FILES=$CHANGED" >> $GITHUB_OUTPUT
+
+      - name: Check input.css vs utilities.md
+        id: check
+        run: |
+          if echo "${{ steps.changed-files.outputs.CHANGED_FILES }}" | grep -q "src/input.css"; then
+            echo "input.css was modified"
+            if ! echo "${{ steps.changed-files.outputs.CHANGED_FILES }}" | grep -q "docs/utilities.md"; then
+              echo "utilities.md was NOT updated"
+              echo "warning=true" >> $GITHUB_OUTPUT
+            else
+              echo "utilities.md updated"
+              echo "warning=false" >> $GITHUB_OUTPUT
+            fi
+          else
+            echo "No input.css changes"
+            echo "warning=false" >> $GITHUB_OUTPUT
+
+      - name: Post PR comment if utilities.md missing
+        if: steps.check.outputs.warning == 'true'
+        uses: peter-evans/create-or-update-comment@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          repository: ${{ github.repository }}
+          issue-number: ${{ github.event.pull_request.number }}
+          body: |
+            ⚠️ **Soft Warning**  
+            You modified `src/input.css` but did **not** update `docs/utilities.md`.  
+            Please update it to document your changes so other developers can reference the new utilities.
+
 
       - name: Get changed files
         id: changed-files
