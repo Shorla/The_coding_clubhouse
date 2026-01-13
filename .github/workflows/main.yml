@@ -1,43 +1,39 @@
-name: Soft Warning - Utilities.md Check
+name: Soft Warning - utilities.md Check
 
 on:
   pull_request:
     branches:
-      - '**'  # Trigger on any PR
+      - '**'  # all PRs
 
 jobs:
-  check-utilities:
+  utilities-check:
     runs-on: ubuntu-latest
     steps:
+
+      # 1️⃣ Checkout full repo history
       - name: Checkout code
         uses: actions/checkout@v3
+        with:
+          fetch-depth: 0  # important for PR file checks
 
-      - name: Check input.css and utilities.md
-        id: check_files
+      # 2️⃣ Get list of changed files in the PR
+      - name: Get changed files
+        id: changed-files
+        uses: tj-actions/changed-files@v34
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+
+      # 3️⃣ Show changed files (optional, for debugging)
+      - name: Debug changed files
         run: |
-          # Get list of changed files in the PR
-          CHANGED_FILES=$(git diff --name-only ${{ github.event.pull_request.base.sha }} ${{ github.sha }})
+          echo "All changed files: ${{ steps.changed-files.outputs.all_changed_files }}"
+          echo "Modified files: ${{ steps.changed-files.outputs.modified_files }}"
 
-          # Default output
-          echo "utilities_updated=false" >> $GITHUB_OUTPUT
-
-          # Check if input.css changed
-          if echo "$CHANGED_FILES" | grep -q "src/input.css"; then
-            echo "input.css was modified"
-
-            # Check if utilities.md was updated
-            if echo "$CHANGED_FILES" | grep -q "docs/utilities.md"; then
-              echo "utilities.md was updated"
-              echo "utilities_updated=true" >> $GITHUB_OUTPUT
-            else
-              echo "utilities.md NOT updated"
-            fi
-          else
-            echo "No input.css changes"
-          fi
-
-      - name: Post PR warning if utilities.md missing
-        if: steps.check_files.outputs.utilities_updated == 'false'
+      # 4️⃣ Post warning if input.css changed but utilities.md not updated
+      - name: Post PR warning
+        if: |
+          contains(steps.changed-files.outputs.all_changed_files, 'src/input.css') &&
+          !contains(steps.changed-files.outputs.all_changed_files, 'docs/utilities.md')
         uses: actions/github-script@v7
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
@@ -46,5 +42,5 @@ jobs:
               issue_number: context.issue.number,
               owner: context.repo.owner,
               repo: context.repo.repo,
-              body: "⚠️ **Soft Warning:** input.css was updated but docs/utilities.md was not. Please update utilities.md to document your changes."
+              body: "⚠️ **Soft Warning:** input.css was updated but docs/utilities.md was not. Please update utilities.md."
             })
