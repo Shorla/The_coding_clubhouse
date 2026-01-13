@@ -16,14 +16,17 @@ jobs:
 
       - name: Check if input.css changed and utilities.md updated
         run: |
-          # Get list of changed files in the push
-          CHANGED_FILES=$(git diff --name-only ${{ github.event.before }} ${{ github.sha }})
+          # If the before SHA is invalid (like all zeros), fallback to HEAD~1
+          if [ "${{ github.event.before }}" = "0000000000000000000000000000000000000000" ]; then
+            BASE="HEAD~1"
+          else
+            BASE="${{ github.event.before }}"
+          fi
 
-          # Check if input.css is in the changed files
+          CHANGED_FILES=$(git diff --name-only $BASE ${{ github.sha }})
+
           if echo "$CHANGED_FILES" | grep -q "src/input.css"; then
             echo "input.css was modified"
-
-            # Check if utilities.md was updated
             if ! echo "$CHANGED_FILES" | grep -q "docs/utilities.md"; then
               echo "::warning file=docs/utilities.md,line=1::⚠️ You updated input.css but not utilities.md"
             fi
