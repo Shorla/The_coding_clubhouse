@@ -1,48 +1,55 @@
 name: Soft Warning - Utilities.md Check
-
-# Trigger only on pull requests
 on:
   pull_request:
-    branches:
-      - '**'  # all branches
-
+    types: [opened, synchronize, reopened]
 jobs:
-  utilities-warning:
+  check-utilities:
     runs-on: ubuntu-latest
     steps:
-      # Step 1: Checkout the code
-      - uses: actions/checkout@v3
-
-      # Step 2: Get all changed files in the PR
+      - name: Checkout code
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0  # get full history for proper diff
       - name: Get list of changed files
-        id: changed-files
+        id: changed
         run: |
-          # Fetch the base branch
-          git fetch origin ${{ github.base_ref }}
-          # Get list of changed files between base and head
-          FILES=$(git diff --name-only origin/${{ github.base_ref }} HEAD)
-          echo "all_changed_files=$FILES" >> $GITHUB_OUTPUT
-
-      # Step 3: Post a soft warning comment if needed
-      - name: Post PR warning if utilities.md not updated
+          CHANGED_FILES=$(git diff --name-only origin/main...HEAD)
+          echo "changed_files<<EOF" >> $GITHUB_OUTPUT
+          echo "$CHANGED_FILES" >> $GITHUB_OUTPUT
+          echo "EOF" >> $GITHUB_OUTPUT
+      - name: Soft warning for utilities.md
         uses: actions/github-script@v7
         with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
           script: |
-            const changedFiles = `${{ steps.changed-files.outputs.all_changed_files }}`.split('\n');
-            
-            if (changedFiles.includes('src/input.css') && !changedFiles.includes('docs/utilities.md')) {
-              const prNumber = context.payload.pull_request?.number;
-              if (!prNumber) {
-                console.log("⚠️ Not a PR event, skipping comment.");
+            const changed = process.env.CHANGED_FILES.split("\n");
+            const prNumber = context.payload.pull_request.number;
+            const hasInputCss = changed.some(f => f.trim() === "src/input.css");
+            const hasUtilitiesMd = changed.some(f => f.trim() === "docs/utilities.md");
+            if (hasInputCss && !hasUtilitiesMd) {
+              const comments = await github.rest.issues.listComments({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: prNumber
+              });
+              const existing = comments.data.find(c =>
+                c.body.includes("⚠️ **Soft Warning:** input.css")
+              );
+              const warningText = "⚠️ **Soft Warning:** input.css was updated but docs/utilities.md was not. Please update utilities.md.";
+              if (existing) {
+                await github.rest.issues.updateComment({
+                  owner: context.repo.owner,
+                  repo: context.repo.repo,
+                  comment_id: existing.id,
+                  body: warningText
+                });
               } else {
-                github.issues.createComment({
+                await github.rest.issues.createComment({
                   owner: context.repo.owner,
                   repo: context.repo.repo,
                   issue_number: prNumber,
-                  body: "⚠️ **Soft Warning:** input.css was updated but docs/utilities.md was not. Please update utilities.md."
+                  body: warningText
                 });
               }
-            } else {
-              console.log("✅ No warning needed.");
             }
+        env:
+          CHANGED_FILES: ${{ steps.changed.outputs.changed_files }}
