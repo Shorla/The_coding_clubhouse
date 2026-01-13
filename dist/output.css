@@ -732,6 +732,41 @@ body {
   color: rgb(201 201 201 / var(--tw-text-opacity, 1));
 }
 
+.small-section-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.small-section-header-title {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: Poppins, sans-serif;
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+  font-weight: 600;
+  --tw-text-opacity: 1;
+  color: rgb(40 105 226 / var(--tw-text-opacity, 1));
+}
+
+.small-section-header-subTitle {
+  margin-top: 1rem;
+  max-width: 48rem;
+  text-align: center;
+  font-family: Nunito, sans-serif;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  --tw-text-opacity: 1;
+  color: rgb(45 45 45 / var(--tw-text-opacity, 1));
+}
+
+.small-section-header-icon {
+  margin-bottom: 0.5rem;
+  height: 2rem;
+  width: 2rem;
+}
+
 .circular-images {
   max-height: 70px;
   max-width: 70px;
