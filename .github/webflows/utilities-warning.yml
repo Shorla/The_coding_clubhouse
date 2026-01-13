@@ -1,0 +1,26 @@
+name: Utilities.md Check
+
+on:
+  push:
+    paths:
+      - 'src/input.css'
+      - 'src/**/*.css'
+
+jobs:
+  check-utilities:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Check if utilities.md was updated
+        run: |
+          # Check if input.css changed in this push
+          if git diff --name-only HEAD~1 HEAD | grep -q 'src/input.css'; then
+            # Check if utilities.md also changed
+            if ! git diff --name-only HEAD~1 HEAD | grep -q 'utilities.md'; then
+              echo "::warning::You updated input.css but did not update utilities.md"
+            fi
+          fi
+
