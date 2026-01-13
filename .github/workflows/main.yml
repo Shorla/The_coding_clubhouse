@@ -1,32 +1,38 @@
 name: Soft Warning - Utilities.md Check
 
+# Trigger on pushes to any branch
 on:
   push:
     branches:
-      - '**'
+      - '**'  # all branches
   pull_request:
     branches:
-      - '**'
+      - '**'  # optional, also triggers on PRs
 
 jobs:
   check-utilities:
     runs-on: ubuntu-latest
+
     steps:
+      # 1️⃣ Checkout code with full history
       - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
 
-      - name: Check if input.css changed and utilities.md updated
+      # 2️⃣ Check if input.css changed without updating utilities.md
+      - name: Check input.css and utilities.md
         run: |
-          # If the before SHA is invalid (like all zeros), fallback to HEAD~1
-          if [ "${{ github.event.before }}" = "0000000000000000000000000000000000000000" ]; then
-            BASE="HEAD~1"
-          else
-            BASE="${{ github.event.before }}"
-          fi
+          # Determine a safe base commit
+          BASE=$(git rev-parse ${{ github.event.before }} 2>/dev/null || git rev-parse HEAD~1)
 
+          # Get list of changed files between base and current commit
           CHANGED_FILES=$(git diff --name-only $BASE ${{ github.sha }})
 
+          # Check if input.css was modified
           if echo "$CHANGED_FILES" | grep -q "src/input.css"; then
             echo "input.css was modified"
+            
+            # Check if utilities.md was also updated
             if ! echo "$CHANGED_FILES" | grep -q "docs/utilities.md"; then
               echo "::warning file=docs/utilities.md,line=1::⚠️ You updated input.css but not utilities.md"
             fi
