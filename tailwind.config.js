@@ -9,15 +9,22 @@ module.exports = {
     extend: {
       colors: {
         brand: {
-          purple: "#8C52FF",   
-          violet: "#C46BE4", 
-          blue: "#184EB4",   
+          purple: "#8C52FF", 
+          purple50: "#EFE8FC",  
+          purple400: '#A273FF',
+          violet: "#CF87E9",
+          violet50: "#F6EBF9",
+          blue: "#2869E2", 
+          blue50: "#EAF0FA", 
           yellow: "#FFD447",  
-          aqua: "#00C2A8", 
-          coral: "#FF6F61",
+          yellow50: "#FCF8E8",  
+          aqua: "#00C2A8",
+          aqua50: "#E8FCFA",
+          coral: "#FF6F61", 
+          coral50: "#FCEAE8",
           gray: "#C9C9C9",
           white: "#FFFFFF",
-          charcoal: "#2D2D2D",    
+          charcoal: "#2D2D2D", 
         },
       },
       fontFamily: {

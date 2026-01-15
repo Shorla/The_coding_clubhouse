@@ -1,0 +1,28 @@
+name: Soft Warning - Utilities.md Check
+
+# Trigger on push to any branch (not just PRs)
+on:
+  push:
+    branches:
+      - '**'   # all branches
+  pull_request:
+    branches:
+      - '**'   # optional, also triggers on PRs
+
+jobs:
+  check-utilities:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Check if input.css changed and utilities.md updated
+        run: |
+          # Check if input.css changed
+          if git diff --name-only HEAD~1 HEAD | grep -q "src/input.css"; then
+            echo "input.css was modified"
+            # Check if utilities.md was updated
+            if ! git diff --name-only HEAD~1 HEAD | grep -q "docs/utilities.md"; then
+              echo "::warning file=docs/utilities.md,line=1::⚠️ You updated input.css but not utilities.md"
+            fi
+          else
+            echo "No input.css changes"
