@@ -89,7 +89,127 @@ The detailed explanation lives in the template below.
 <button class="btn-primary">Donate</button>
 
 ---
+## 🎴 Profile Card
 
+### Profile Card Container
+- **Class name:** `.profile-card`
+- **Layer:** components
+- **Category:** Card
+- **Used for:** Main container for user profile cards displaying user information in a card layout
+- **Do NOT use for:** Profile pages, profile modals, or non-card-based profile displays
+- **Tailwind utilities applied:**
+  - `w-full`
+  - `max-w-sm`
+  - `flex`
+  - `flex-col`
+  - `items-center`
+  - `rounded-xl`
+  - `border-2`
+  - `pt-6`, `pb-6`, `px-5`
+  - `text-center`
+  - `shadow-sm`
+  - `bg-brand-blue50`
+  - `order-brand-gray`
+- **HTML example:**
+```html
+<div class="profile-card">
+  <div class="profile-card__avatar-wrap">
+    <img src="avatar.jpg" alt="User" class="profile-card__avatar" />
+  </div>
+  <h2 class="profile-card__name">John Doe</h2>
+  <p class="profile-card__role">Software Developer</p>
+  <p class="profile-card__bio">Passionate about building great software.</p>
+</div>
+```
+
+---
+
+### Profile Card Avatar Wrapper
+- **Class name:** `.profile-card__avatar-wrap`
+- **Layer:** components
+- **Category:** Card
+- **Used for:** Container that wraps the profile avatar image with padding and shadow
+- **Do NOT use for:** Other image containers or non-avatar elements
+- **Tailwind utilities applied:**
+  - `w-32`
+  - `h-32`
+  - `rounded-full`
+  - `bg-brand-white`
+  - `p-1.5`
+  - `shadow-md`
+
+---
+
+### Profile Card Avatar Image
+- **Class name:** `.profile-card__avatar`
+- **Layer:** components
+- **Category:** Card
+- **Used for:** Avatar image element inside the wrapper
+- **Do NOT use for:** Other images or background images
+- **Tailwind utilities applied:**
+  - `w-full`
+  - `h-full`
+  - `rounded-full`
+  - `object-cover`
+  - `block`
+
+---
+
+### Profile Card Name
+- **Class name:** `.profile-card__name`
+- **Layer:** components
+- **Category:** Card
+- **Used for:** User's name heading in the profile card
+- **Do NOT use for:** Other text or headings
+- **Tailwind utilities applied:**
+  - `mt-6`
+  - `text-2xl`
+  - `font-semibold`
+  - `text-brand-charcoal`
+
+---
+
+### Profile Card Role
+- **Class name:** `.profile-card__role`
+- **Layer:** components
+- **Category:** Card
+- **Used for:** User's role or title text in the profile card
+- **Do NOT use for:** General text content or descriptions
+- **Tailwind utilities applied:**
+  - `mt-2`
+  - `text-[18px]`
+  - `font-extrabold`
+  - `leading-relaxed`
+  - `text-brand-blue`
+
+---
+
+### Profile Card Bio
+- **Class name:** `.profile-card__bio`
+- **Layer:** components
+- **Category:** Card
+- **Used for:** User's biography or description text
+- **Do NOT use for:** Names, roles, or other profile data
+- **Tailwind utilities applied:**
+  - `mt-6`
+  - `text-lg`
+  - `font-medium`
+  - `leading-relaxed`
+  - `text-brand-purple`
+  - `text-justify`
+
+---
+
+## Table Entries for Utilities Table
+
+| Class Name | Category | Description | File |
+|----------|--------|------------|------|
+| `.profile-card` | Card | Main profile card container | input.css |
+| `.profile-card__avatar-wrap` | Card | Avatar wrapper with shadow | input.css |
+| `.profile-card__avatar` | Card | Avatar image styling | input.css |
+| `.profile-card__name` | Card | Profile name text | input.css |
+| `.profile-card__role` | Card | Profile role/title text | input.css |
+| `.profile-card__bio` | Card | Profile biography text | input.css |
 
 
 
