@@ -114,3 +114,65 @@
 
 }
 
+  /* Nav Bar classes*/
+  .navbar-container {
+    @apply bg-brand-purple 
+    text-brand-white text-center 
+    w-full h-auto 
+    flex justify-between fixed
+    top-0 m-0 p-2;
+  }
+  .hamburger-icon {
+    @apply mt-2 cursor-pointer md:hidden;
+  }
+  .navbar-links-wrapper {
+    @apply text-sm text-center 
+    font-sans font-medium
+    hidden md:flex gap-2 lg:gap-4
+    px-2 py-2 
+    mr-4;
+  }
+  .navbar-links {
+    @apply p-2 hover:text-brand-yellow;
+  }
+
+  /* Footer Classes*/
+  .footer-container {
+    @apply bg-brand-white text-brand-charcoal
+    w-full 
+    px-10 pt-20;
+  }
+  .footer-webpages-link {
+    @apply grid grid-cols-3 md:flex
+    text-sm font-bold py-5;
+  }
+  .media-icons {
+    @apply flex gap-10 md:col-span-3 md:py-5;
+  }
+  .newsletter {
+    @apply block md:flex lg:ml-5 my-10 justify-center;
+  }
+  .newsletter-h3 {
+    @apply font-bold tracking-wider mb-2 mr-6;
+  }
+  .copyright {
+    @apply block text-gray-400 text-sm pb-10 pt-5 md:text-center;
+  }
+
+  /* Expand our impact */
+  .impact-card-background {
+    @apply w-auto h-auto text-center
+    bg-brand-purple bg-cover bg-blend-soft-light 
+    hover:bg-blend-darken 
+    shadow-xl rounded-lg  
+    mx-8 md:mx-20 mt-20 mb-2 p-8;
+  }
+  .impact-card-h1 {
+    @apply font-bold text-xl md:text-3xl text-brand-charcoal font-heading tracking-wide;
+  }
+  .impact-btn-container {
+    @apply grid grid-cols-2 md:flex justify-center pb-4 mt-5 md:mt-8 text-brand-charcoal;
+  }
+  .tiny-codes-snippet {
+    @apply text-right text-sm flex justify-end text-brand-blue mb-10;
+  }
