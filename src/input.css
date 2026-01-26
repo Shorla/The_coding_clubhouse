@@ -6,6 +6,17 @@
   body{
     @apply bg-brand-white
   }
+  @font-face {
+    font-family: "Nunito";
+    src: url("/fonts/Nunito-Regular.ttf") format("truetype");
+    font-weight: 400;
+  }
+
+  @font-face {
+    font-family: "Poppins";
+    src: url("/fonts/Poppins-Bold.ttf") format("truetype");
+    font-weight: 700;
+  }
 }
 
 @layer components {
@@ -57,5 +68,49 @@
   } 
   .blog-news-card-title {
     @apply text-sm font-semibold  text-left text-brand-gray ;
+  } 
+  .small-section-header {
+    @apply flex flex-col items-center  ; 
   }
+  .small-section-header-title {
+     @apply text-4xl font-heading font-semibold text-brand-blue flex items-center gap-2
+  }
+  .small-section-header-subTitle {
+    @apply text-lg font-sans text-brand-charcoal mt-4 max-w-3xl text-center
+  }
+  .small-section-header-icon {
+    @apply w-8 h-8 mb-2
+  }
+  .circular-images {
+    @apply max-w-[70px] max-h-[70px] rounded-full  ;
+  }
+.profile-card {
+  @apply w-full max-w-sm flex flex-col items-center
+    rounded-xl border-2
+    pt-6 pb-6 px-5
+    text-center shadow-sm
+    bg-brand-blue50 border-brand-gray; /* Changed to brand color */
 }
+
+.profile-card__avatar-wrap {
+  @apply w-32 h-32 rounded-full bg-brand-white p-1.5 shadow-md;
+}
+
+.profile-card__avatar {
+  @apply w-full h-full rounded-full object-cover block;
+}
+
+.profile-card__name {
+  @apply mt-6 text-2xl font-semibold text-brand-charcoal;
+}
+
+.profile-card__role {
+  @apply mt-2 text-[18px] font-extrabold leading-relaxed text-brand-blue; /* Changed to brand color */
+}
+
+.profile-card__bio {
+  @apply mt-6 text-lg font-medium leading-relaxed text-brand-purple; /* Changed to brand color */
+}
+
+}
+

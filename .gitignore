@@ -1,0 +1,5 @@
+# Dependencies
+node_modules/
+
+# Generated CSS
+dist/output.css
