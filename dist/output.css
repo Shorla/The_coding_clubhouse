@@ -895,12 +895,12 @@ body {
 
 .contact-form__input::-moz-placeholder {
   --tw-text-opacity: 1;
-  color: rgb(156 163 175 / var(--tw-text-opacity, 1));
+  color: rgb(201 201 201 / var(--tw-text-opacity, 1));
 }
 
 .contact-form__input::placeholder {
   --tw-text-opacity: 1;
-  color: rgb(156 163 175 / var(--tw-text-opacity, 1));
+  color: rgb(201 201 201 / var(--tw-text-opacity, 1));
 }
 
 .contact-form__input:focus {
@@ -945,7 +945,7 @@ body {
   font-weight: 500;
   line-height: 1;
   --tw-text-opacity: 1;
-  color: rgb(31 41 55 / var(--tw-text-opacity, 1));
+  color: rgb(45 45 45 / var(--tw-text-opacity, 1));
 }
 
 .contact-form__textarea {
@@ -958,17 +958,17 @@ body {
   font-size: 1.125rem;
   line-height: 1.75rem;
   --tw-text-opacity: 1;
-  color: rgb(55 65 81 / var(--tw-text-opacity, 1));
+  color: rgb(45 45 45 / var(--tw-text-opacity, 1));
 }
 
 .contact-form__textarea::-moz-placeholder {
   --tw-text-opacity: 1;
-  color: rgb(209 213 219 / var(--tw-text-opacity, 1));
+  color: rgb(229 229 229 / var(--tw-text-opacity, 1));
 }
 
 .contact-form__textarea::placeholder {
   --tw-text-opacity: 1;
-  color: rgb(209 213 219 / var(--tw-text-opacity, 1));
+  color: rgb(229 229 229 / var(--tw-text-opacity, 1));
 }
 
 .contact-form__textarea:focus {
@@ -985,7 +985,7 @@ body {
   font-size: 1.125rem;
   line-height: 1.75rem;
   --tw-text-opacity: 1;
-  color: rgb(55 65 81 / var(--tw-text-opacity, 1));
+  color: rgb(45 45 45 / var(--tw-text-opacity, 1));
 }
 
 .mt-2 {

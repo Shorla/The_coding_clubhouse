@@ -133,17 +133,17 @@
   }
   .contact-form__textarea {
     @apply w-full rounded border-2 border-brand-neutralWhite
-         bg-white flex flex-col justify-center gap-2
+         bg-brand-white flex flex-col justify-center gap-2
          focus-within:outline-none focus-within:ring-2 focus-within:ring-brand-purple;
   }
 
   .contact-form__input {
     @apply w-full border-0 p-0 bg-transparent text-lg
          focus:outline-none focus:ring-0
-         placeholder:text-gray-400;
+         placeholder:text-brand-gray;
   }
   .contact-form__textareaField {
-    @apply w-full rounded border border-brand-neutralWhite bg-white
+    @apply w-full rounded border border-brand-neutralWhite bg-brand-white
          px-3 pt-3 pb-4
          min-h-[11rem]
          flex flex-col gap-2
@@ -151,18 +151,18 @@
   }
 
   .contact-form__innerLabel {
-    @apply text-2xl font-medium leading-none text-gray-800;
+    @apply text-2xl font-medium leading-none text-brand-charcoal;
   }
 
   .contact-form__textarea {
     @apply w-full flex-1 resize-none
          border-0 bg-transparent p-0
-         text-lg text-gray-700
-         placeholder:text-gray-300
+         text-lg text-brand-charcoal
+         placeholder:text-brand-neutralWhite
          focus:outline-none focus:ring-0;
   }
 
   .contact-form__counter {
-    @apply mt-2 text-right text-lg text-gray-700;
+    @apply mt-2 text-right text-lg text-brand-charcoal;
   }
 }
