@@ -917,15 +917,6 @@ body {
   --tw-ring-color: rgb(140 82 255 / var(--tw-ring-opacity, 1));
 }
 
-.contact-form__innerLabel {
-  font-size: 1.5rem;
-  line-height: 2rem;
-  font-weight: 500;
-  line-height: 1;
-  --tw-text-opacity: 1;
-  color: rgb(45 45 45 / var(--tw-text-opacity, 1));
-}
-
 .contact-form__textarea {
   width: 100%;
   flex: 1 1 0%;

@@ -144,10 +144,6 @@
          focus-within:border-brand-purple focus-within:ring-1 focus-within:ring-brand-purple;
   }
 
-  .contact-form__innerLabel {
-    @apply text-2xl font-medium leading-none text-brand-charcoal;
-  }
-
   .contact-form__textarea {
     @apply w-full flex-1 resize-none
          border-0 bg-transparent p-0
