@@ -3,8 +3,8 @@
 @tailwind utilities;
 
 @layer base {
-  body{
-    @apply bg-brand-white
+  body {
+    @apply bg-brand-white;
   }
   @font-face {
     font-family: "Nunito";
@@ -24,10 +24,11 @@
     @apply text-brand-white px-4 py-2 rounded-lg text-sm;
   }
   .btn-secondary {
-   /* Create a with secondary color. Add hover + focus states.*/
+    /* Create a with secondary color. Add hover + focus states.*/
     @apply text-brand-charcoal px-10 py-6 rounded-md text-sm border-2 border-brand-gray;
   }
-  .btn-secondary:hover, .btn-secondary:focus {
+  .btn-secondary:hover,
+  .btn-secondary:focus {
     @apply bg-brand-purple text-white;
   }
   .btn-outline {
@@ -36,81 +37,122 @@
   .btn-outline-img {
     @apply w-3 h-3  ml-2 inline-block;
   }
- .btn-outline:hover {
-  @apply bg-brand-purple text-white;
- }
- .info-card {
-  @apply px-6 py-4 shadow-md rounded-xl max-w-[350px] min-h-[550px] w-full;
- }
-.info-card-title {
-  @apply text-xl font-semibold mt-2 mb-4  text-left text-brand-charcoal px-1 py-1;
-}
- .info-card-body {
+  .btn-outline:hover {
+    @apply bg-brand-purple text-white;
+  }
+  .info-card {
+    @apply px-6 py-4 shadow-md rounded-xl max-w-[350px] min-h-[550px] w-full;
+  }
+  .info-card-title {
+    @apply text-xl font-semibold mt-2 mb-4  text-left text-brand-charcoal px-1 py-1;
+  }
+  .info-card-body {
     @apply text-base font-normal text-left text-brand-charcoal;
   }
   .info-card-workspace {
     @apply w-full h-full mt-4 rounded-md;
   }
   .info-card-frame {
-    @apply w-20 h-10 mt-1 ;
+    @apply w-20 h-10 mt-1;
   }
   .blog-news-card {
     @apply px-4 py-5 shadow-md rounded-xl max-w-[500px] w-full;
   }
   .blog-news-card-workspace {
     @apply w-full h-48 mt-4 mb-1 rounded-md;
-  } 
+  }
   .blog-news-card-header {
-    @apply flex items-center gap-2 ;
+    @apply flex items-center gap-2;
   }
   .blog-news-card-frame {
-    @apply w-8 h-2 m-1 ;
-  } 
+    @apply w-8 h-2 m-1;
+  }
   .blog-news-card-title {
-    @apply text-sm font-semibold  text-left text-brand-gray ;
-  } 
+    @apply text-sm font-semibold  text-left text-brand-gray;
+  }
   .small-section-header {
-    @apply flex flex-col items-center  ; 
+    @apply flex flex-col items-center;
   }
   .small-section-header-title {
-     @apply text-4xl font-heading font-semibold text-brand-blue flex items-center gap-2
+    @apply text-4xl font-heading font-semibold text-brand-blue flex items-center gap-2;
   }
   .small-section-header-subTitle {
-    @apply text-lg font-sans text-brand-charcoal mt-4 max-w-3xl text-center
+    @apply text-lg font-sans text-brand-charcoal mt-4 max-w-3xl text-center;
   }
   .small-section-header-icon {
-    @apply w-8 h-8 mb-2
+    @apply w-8 h-8 mb-2;
   }
   .circular-images {
-    @apply max-w-[70px] max-h-[70px] rounded-full  ;
+    @apply max-w-[70px] max-h-[70px] rounded-full;
   }
-.profile-card {
-  @apply w-full max-w-sm flex flex-col items-center
+  .profile-card {
+    @apply w-full max-w-sm flex flex-col items-center
     rounded-xl border-2
     pt-6 pb-6 px-5
     text-center shadow-sm
     bg-brand-blue50 border-brand-gray; /* Changed to brand color */
-}
+  }
 
-.profile-card__avatar-wrap {
-  @apply w-32 h-32 rounded-full bg-brand-white p-1.5 shadow-md;
-}
+  .profile-card__avatar-wrap {
+    @apply w-32 h-32 rounded-full bg-brand-white p-1.5 shadow-md;
+  }
 
-.profile-card__avatar {
-  @apply w-full h-full rounded-full object-cover block;
-}
+  .profile-card__avatar {
+    @apply w-full h-full rounded-full object-cover block;
+  }
 
-.profile-card__name {
-  @apply mt-6 text-2xl font-semibold text-brand-charcoal;
-}
+  .profile-card__name {
+    @apply mt-6 text-2xl font-semibold text-brand-charcoal;
+  }
 
-.profile-card__role {
-  @apply mt-2 text-[18px] font-extrabold leading-relaxed text-brand-blue; /* Changed to brand color */
-}
+  .profile-card__role {
+    @apply mt-2 text-[18px] font-extrabold leading-relaxed text-brand-blue; /* Changed to brand color */
+  }
 
-.profile-card__bio {
-  @apply mt-6 text-lg font-medium leading-relaxed text-brand-purple; /* Changed to brand color */
-}
+  .profile-card__bio {
+    @apply mt-6 text-lg font-medium leading-relaxed text-brand-purple; /* Changed to brand color */
+  }
 
-}
+ .contact-form {
+    @apply w-full max-w-3xl bg-brand-white rounded-lg shadow-md p-8;
+  }
+  .contact-title {
+    @apply text-2xl font-bold mb-4 text-brand-charcoal;
+  }
+  .contact-form__field {
+    @apply h-[3.9375rem] min-h-[2.75rem]
+         rounded border-2 border-brand-neutralWhite
 
+         bg-brand-white flex flex-col justify-center gap-2
+         focus-within:outline-none focus-within:ring-2 focus-within:ring-brand-purple;
+  }
+
+  .contact-form__innerLabel {
+    @apply text-2xl font-medium leading-none text-brand-charcoal;
+  }
+
+  .contact-form__input {
+    @apply w-full border-0 p-0 bg-transparent text-lg
+         focus:outline-none focus:ring-0
+         placeholder:text-brand-gray;
+  }
+  .contact-form__textareaField {
+    @apply w-full rounded border-2 border-brand-neutralWhite bg-brand-white
+         px-3 pt-3 pb-4
+         min-h-[11rem]
+         flex flex-col gap-2
+         focus-within:border-brand-purple focus-within:ring-1 focus-within:ring-brand-purple;
+  }
+
+  .contact-form__textarea {
+    @apply w-full flex-1 resize-none
+         border-0 bg-transparent p-0
+         text-lg text-brand-charcoal
+         placeholder:text-brand-gray
+         focus:outline-none focus:ring-0;
+  }
+
+  .contact-form__counter {
+    @apply mt-2 text-right text-lg text-brand-charcoal;
+  }
+}

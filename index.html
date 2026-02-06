@@ -1,80 +1,186 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>NGO Website</title>
-  <link href="dist/output.css" rel="stylesheet">
-</head>
-<body class="font-body">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NGO Website</title>
+    <link href="dist/output.css" rel="stylesheet" />
+  </head>
+  <body class="font-body">
+    <!-- Navbar -->
+    <nav class="bg-brand-purple text-white p-4">
+      <h1 class="font-heading text-xl">NGO Name</h1>
+    </nav>
 
-  <!-- Navbar -->
-  <nav class="bg-brand-purple text-white p-4">
-    <h1 class="font-heading text-xl">NGO Name</h1>
-  </nav>
-
-  <!-- Hero Section --> 
-  <section class="bg-brand-purple text-white p-12 text-center">
-    <h2 class="text-4xl font-heading">Welcome to Our NGO</h2>
-    <p class="mt-2">Making the world better, one step at a time.</p>
-    <button class="btn-primary bg-brand-yellow ">
-      Explore Our Programs
-    </button>
+    <!-- Hero Section -->
+    <section class="bg-brand-purple text-white p-12 text-center">
+      <h2 class="text-4xl font-heading">Welcome to Our NGO</h2>
+      <p class="mt-2">Making the world better, one step at a time.</p>
+      <button class="btn-primary bg-brand-yellow">Explore Our Programs</button>
     </section>
     <section class="bg-hero-gradient text-brand-coral50 p-12 text-center">
       <h2 class="text-4xl font-heading">This is a sample background</h2>
 
-      <button class=" btn-secondary btn-secondary:hover"> Code Equity Curriculum</button>
-      <button class="btn-outline text-black btn-outline:hover">Learn More
-        <img src="/assets/Building Blocks/Icon.png" alt="arrow right" class="btn-outline-img">
+      <button class="btn-secondary btn-secondary:hover">
+        Code Equity Curriculum
+      </button>
+      <button class="btn-outline text-black btn-outline:hover">
+        Learn More
+        <img
+          src="/assets/Building Blocks/Icon.png"
+          alt="arrow right"
+          class="btn-outline-img"
+        />
       </button>
       <div class="info-card bg-brand-aqua50">
-        <img src="/assets/Frame 1597884959.png" alt="" class="info-card-frame" srcset="">
+        <img
+          src="/assets/Frame 1597884959.png"
+          alt=""
+          class="info-card-frame"
+          srcset=""
+        />
         <h3 class="info-card-title text-2xl">Dream Beyond Limits</h3>
-        <p class="info-card-body">A hands-on outreach program that selects three promising
-           students and one teacher 
-          from each participating school. We inspire them through coding sessions and leave
-           behind our Code Equity curriculum to help the entire school continue learning.
+        <p class="info-card-body">
+          A hands-on outreach program that selects three promising students and
+          one teacher from each participating school. We inspire them through
+          coding sessions and leave behind our Code Equity curriculum to help
+          the entire school continue learning.
         </p>
-        <img src="/assets/Coding workspace.png" alt="" class="info-card-workspace" srcset="">
+        <img
+          src="/assets/Coding workspace.png"
+          alt=""
+          class="info-card-workspace"
+          srcset=""
+        />
       </div>
       <div class="blog-news-card bg-brand-white">
         <div class="blog-news-card-header">
-        <img src="/assets/web tab.png" alt="" class="blog-news-card-frame" srcset="">
-        <h3 class="blog-news-card-title"> donate.js</h3>
+          <img
+            src="/assets/web tab.png"
+            alt=""
+            class="blog-news-card-frame"
+            srcset=""
+          />
+          <h3 class="blog-news-card-title">donate.js</h3>
         </div>
-        <img src="/assets/blog-news-Coding workspace.png" alt="" class="blog-news-card-workspace" srcset=""> </div>  
+        <img
+          src="/assets/blog-news-Coding workspace.png"
+          alt=""
+          class="blog-news-card-workspace"
+          srcset=""
+        />
+      </div>
+    </section>
+    <section>
+      <!-- Form -->
+      <div class="contact-form border-2">
+        <!-- Title -->
+        <h2 class="contact-title">Contact Form</h2>
+
+        <!-- Form -->
+        <form class="space-y-6">
+          <!-- Full Name -->
+          <div class="contact-form__field">
+            <label for="fullName" class="contact-form__innerLabel px-3 pt-2">
+              Full Name<span class="text-red-500">*</span>
+            </label>
+
+            <input
+              id="fullName"
+              type="text"
+              placeholder="example@domain.com"
+              class="contact-form__input px-3"
+              required
+            />
+          </div>
+
+          <!-- Email Address -->
+          <div class="contact-form__field">
+            <label for="email" class="contact-form__innerLabel px-3 pt-2">
+              Email Address<span class="text-red-500">*</span>
+            </label>
+            <input
+              type="email"
+              placeholder="example@domain.com"
+              class="contact-form__input px-3"
+              required
+            />
+          </div>
+
+          <!-- Subject -->
+          <div class="contact-form__field">
+            <label for="subject" class="contact-form__innerLabel px-3 pt-2">
+              Subject<span class="text-red-500">*</span>
+            </label>
+            <input
+              type="text"
+              placeholder="Write message subject"
+              class="contact-form__input px-3"
+              required
+            />
+          </div>
+
+          <!-- Message -->
+          <div>
+            <div class="contact-form__textareaField">
+              <label for="message" class="contact-form__innerLabel">
+                Message<span class="text-red-500">*</span>
+              </label>
+
+              <textarea
+                id="message"
+                class="contact-form__textarea"
+                placeholder="Write message"
+                maxlength="1000"
+                required
+              ></textarea>
+            </div>
+
+            <div class="contact-form__counter">
+              <span id="messageCount">0</span>/1000
+            </div>
+          </div>
+
+          <!-- Submit -->
+          <div class="flex justify-end">
+            <button
+              type="submit"
+              class="bg-brand-yellow hover:bg-brand-yellow text-black font-semibold text-lg px-8 py-3 rounded-lg transition"
+            >
+              Send Message
+            </button>
+          </div>
+        </form>
+      </div>
     </section>
 
+    <!-- Success Example -->
+    <div class="p-6 text-brand-blue">✅ Your donation makes an impact!</div>
 
-  <!-- Success Example -->
-  <div class="p-6 text-brand-blue">
-    ✅ Your donation makes an impact!
-  </div>
+    <section class="p-12 flex justify-start">
+      <article class="profile-card">
+        <div class="profile-card__avatar-wrap">
+          <img
+            class="profile-card__avatar"
+            src="assets/img/profile-card-1.jpg"
+            alt="Shola Ogunkelu"
+            width="120"
+            height="120"
+            loading="lazy"
+          />
+        </div>
 
-<section class="p-12 flex justify-start">
-  <article class="profile-card">
-    <div class="profile-card__avatar-wrap">
-      <img
-        class="profile-card__avatar"
-        src="assets/img/profile-card-1.jpg"
-        alt="Shola Ogunkelu"
-        width="120"
-        height="120"
-        loading="lazy"
-      />
-    </div>
+        <h3 class="profile-card__name font-heading">Shola Ogunkelu</h3>
+        <p class="profile-card__role font-body">
+          Founder &amp; Coding Educator
+        </p>
 
-    <h3 class="profile-card__name font-heading">Shola Ogunkelu</h3>
-    <p class="profile-card__role font-body">Founder &amp; Coding Educator</p>
-
-    <p class="profile-card__bio font-body">
-      A passionate educator and software engineer dedicated to making tech education
-      accessible to all kids, especially those in low-resource communities.
-    </p>
-  </article>
-</section>
-
-
-</body>
+        <p class="profile-card__bio font-body">
+          A passionate educator and software engineer dedicated to making tech
+          education accessible to all kids, especially those in low-resource
+          communities.
+        </p>
+      </article>
+    </section>
+  </body>
 </html>
