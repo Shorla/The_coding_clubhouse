@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Coding ClubHouse</title>
+    <link href="dist/output.css" rel="stylesheet">
+</head>
+<body>
+    
+<!-- Navbar - Horizontal: logo left, menu right. Using flex justify-between items-center -->
+<nav class="bg-brand-purple text-white p-4">
+  <div class="container mx-auto flex items-center justify-between">
+    <!-- Logo - Left -->
+    <div class="flex items-center">
+      <a href="index.html" class="flex items-center">
+        <img src="assets/img/logo.png" alt="The Coding ClubHouse Logo" class="h-16 w-auto">
+      </a>
+    </div>
+
+    <!-- Menu - Right -->
+    <div class="hidden md:flex items-center space-x-8">
+      <a href="about.html" class="hover:text-brand-yellow transition-colors duration-200 font-semibold">About Us</a>
+      
+      <!-- Programs Dropdown (JavaScript) -->
+      <div class="relative">
+        <button id="programsDropdownBtn" class="flex items-center space-x-1 hover:text-brand-yellow transition-colors duration-200 cursor-pointer font-semibold">
+          <span>Programs</span>
+          <svg id="programsArrow" class="w-4 h-4 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M19 9l-7 7-7-7"></path>
+          </svg>
+        </button>
+        
+        <!-- Dropdown Menu -->
+        <div id="programsDropdownMenu" class="hidden absolute top-full left-0 mt-2 bg-white rounded-lg shadow-lg py-2 w-80 z-50">
+          <a href="#all-programs" class="block px-4 py-3 text-gray-800 hover:bg-gray-100 transition-colors duration-200">
+            All Programs
+          </a>
+          <a href="#dream-beyond-limits" class="block px-4 py-3 text-gray-800 hover:bg-gray-100 transition-colors duration-200">
+            <span class= "text-black px-1">Dream</span> Beyond Limits
+          </a>
+          <a href="#teacher-training" class="block px-4 py-3 text-gray-800 hover:bg-gray-100 transition-colors duration-200">
+            Teacher Training & Youth Empowerment
+          </a>
+          <a href="#virtual-summer-class" class="block px-4 py-3 text-gray-800 hover:bg-gray-100 transition-colors duration-200">
+            Virtual Summer Class
+          </a>
+          <a href="#code-equity" class="block px-4 py-3 text-gray-800 hover:bg-gray-100 transition-colors duration-200">
+            Code Equity Curriculum
+          </a>
+        </div>
+      </div>
+      
+      <a href="#resources" class="hover:text-brand-yellow transition-colors duration-200 font-semibold">Resources</a>
+      <a href="#get-involved" class="hover:text-brand-yellow transition-colors duration-200 font-semibold">Get Involved</a>
+    </div>
+
+    <!-- Action Buttons - Right -->
+    <div class="hidden md:flex items-center space-x-3">
+      <button class="bg-brand-yellow text-black px-6 py-2 rounded-lg hover:bg-yellow-400 transition-colors duration-200 flex items-center space-x-2">
+        <img src="assets/img/Heart.svg" alt="Heart" class="w-5 h-5">
+        <span>Donate</span>
+      </button>
+      <a href="contact.html" class="bg-white text-black px-6 py-2 rounded-lg hover:bg-gray-100 transition-colors duration-200">
+        Contact Us
+      </a>
+    </div>
+
+    <!-- Mobile Menu Button -->
+    <button id="mobileMenuBtn" class="md:hidden text-white cursor-pointer">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+      </svg>
+    </button>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div id="mobileMenu" class="hidden md:hidden mt-4 pb-4">
+    <a href="about.html" class="block py-2 px-4 hover:bg-brand-violet transition-colors duration-200">About Us</a>
+    
+    <!-- Mobile Programs Submenu -->
+    <div class="py-2 px-4">
+      <button id="mobileProgramsBtn" class="w-full text-left flex items-center justify-between hover:text-brand-yellow transition-colors duration-200 cursor-pointer">
+        <span>Programs</span>
+        <svg id="mobileProgramsArrow" class="w-4 h-4 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M19 9l-7 7-7-7"></path>
+        </svg>
+      </button>
+      <div id="mobileProgramsMenu" class="hidden pl-4 mt-2 space-y-2">
+        <a href="#dream-beyond-limits" class="block py-1 text-sm">
+          <span class= "text-black px-1">Dream</span> Beyond Limits
+        </a>
+        <a href="#teacher-training" class="block py-1 text-sm">Teacher Training & Youth Empowerment</a>
+        <a href="#virtual-summer-class" class="block py-1 text-sm">Virtual Summer Class</a>
+        <a href="#code-equity" class="block py-1 text-sm">Code Equity Curriculum</a>
+      </div>
+    </div>
+    
+    <a href="#resources" class="block py-2 px-4 hover:bg-brand-violet transition-colors duration-200">Resources</a>
+    <a href="#get-involved" class="block py-2 px-4 hover:bg-brand-violet transition-colors duration-200">Get Involved</a>
+    
+    <div class="mt-4 px-4 space-y-2">
+      <button class="w-full bg-brand-yellow text-black px-6 py-2 rounded-lg font-semibold hover:bg-yellow-400 transition-colors duration-200 flex items-center justify-center space-x-2">
+        <img src="assets/img/Heart.svg" alt="Heart" class="w-5 h-5">
+        <span>Donate</span>
+      </button>
+      <a href="contact.html" class="block text-center bg-white text-brand-purple px-6 py-2 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-200">
+        Contact Us
+      </a>
+    </div>
+  </div>
+</nav>
+
+<!-- Main Content Area -->
+<main id="main-content">
+  <!-- Content from other pages will be loaded here via JavaScript -->
+</main>
+
+<!-- Vanilla JavaScript with Event Listeners -->
+<script>
+  // Wait for DOM to load
+  document.addEventListener('DOMContentLoaded', function() {
+    
+    // Desktop Programs Dropdown
+    const programsBtn = document.getElementById('programsDropdownBtn');
+    const programsMenu = document.getElementById('programsDropdownMenu');
+    const programsArrow = document.getElementById('programsArrow');
+    
+    if (programsBtn && programsMenu) {
+      // Toggle dropdown on button click
+      programsBtn.addEventListener('click', function(event) {
+        event.stopPropagation();
+        programsMenu.classList.toggle('hidden');
+        // Rotate arrow
+        if (programsArrow) {
+          programsArrow.classList.toggle('rotate-180');
+        }
+      });
+      
+      // Close dropdown when clicking outside
+      document.addEventListener('click', function(event) {
+        if (!programsBtn.contains(event.target) && !programsMenu.contains(event.target)) {
+          programsMenu.classList.add('hidden');
+          // Reset arrow
+          if (programsArrow) {
+            programsArrow.classList.remove('rotate-180');
+          }
+        }
+      });
+    }
+    
+    // Mobile Menu Toggle
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    
+    if (mobileMenuBtn && mobileMenu) {
+      mobileMenuBtn.addEventListener('click', function() {
+        mobileMenu.classList.toggle('hidden');
+      });
+    }
+    
+    // Mobile Programs Submenu
+    const mobileProgramsBtn = document.getElementById('mobileProgramsBtn');
+    const mobileProgramsMenu = document.getElementById('mobileProgramsMenu');
+    const mobileProgramsArrow = document.getElementById('mobileProgramsArrow');
+    
+    if (mobileProgramsBtn && mobileProgramsMenu) {
+      mobileProgramsBtn.addEventListener('click', function() {
+        mobileProgramsMenu.classList.toggle('hidden');
+        // Rotate arrow
+        if (mobileProgramsArrow) {
+          mobileProgramsArrow.classList.toggle('rotate-180');
+        }
+      });
+    }
+  });
+</script>
+
+</body>
+</html>
