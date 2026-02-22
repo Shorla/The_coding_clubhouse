@@ -2,6 +2,12 @@ import { defineConfig } from 'vite'
 
 export default defineConfig({
   server: {
-    open: true
+    open: true,
+    watch: {
+      usePolling: true,
+      ignored: ['!**/dist/**']
+    }
   }
 })
+
+ 
