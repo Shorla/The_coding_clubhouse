@@ -27,7 +27,7 @@
    @apply text-5xl font-semibold mb-6
   }
   .hero-btn {
-    @apply text-sm font-medium bg-brand-aqua/20 text-brand-aqua;
+    @apply text-sm font-medium bg-brand-aqua/20 text-brand-aqua p-1.5 rounded-sm;
  }
   .btn-primary {
     @apply text-brand-white px-6 py-3 rounded-lg text-sm;
