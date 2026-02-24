@@ -20,8 +20,22 @@
 }
 
 @layer components {
+  .hero-section {
+    @apply bg-brand-purple text-white flex flex-col items-center justify-center text-center
+  }
+  .hero-header-text {
+   @apply text-5xl font-semibold mb-6
+  }
+  .hero-btn {
+    @apply text-sm font-medium bg-brand-aqua/20 text-brand-aqua p-1.5 rounded-sm;
+ }
   .btn-primary {
-    @apply text-brand-white px-4 py-2 rounded-lg text-sm;
+    @apply text-brand-white px-6 py-3 rounded-lg text-sm;
+  }
+
+  .btn-primary:hover,
+  .btn-primary:focus {
+    @apply bg-brand-white text-black;
   }
   .btn-secondary {
     /* Create a with secondary color. Add hover + focus states.*/
@@ -167,4 +181,11 @@
   .girls-top {
     @apply h-[73px] w-[604px] flex items-start gap-[10px] px-3 pt-[20px];
   }
+.section {
+  @apply bg-brand-purple text-white p-12 flex flex-col items-center justify-center text-center;
+}
+.hear {
+  @apply text-5xl font-heading font-thin;
+}
+
 }

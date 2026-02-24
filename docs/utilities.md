@@ -49,6 +49,26 @@ Use this table to quickly search and understand available utilities.
 | `.contact-form__textarea`      | Form Field | The actual `<textarea>` element (borderless, grows) | input.css |
 | `.contact-form__counter`       | Form Field | Bottom-right character counter text                 | input.css |
 | `.girls-card` | Card | Hero Stack | input.css|
+| `.btn-secondary` | Button | Secondary action button | input.css |
+| `.btn-secondary:hover` | Button | Secondary Button Hover State | input.css |
+| `.btn-secondary:focus` | Button | Secondary Button Focus State | input.css |
+| `.btn-outline` | Button | Outline Action Button | input.css |
+| `.btn-outline-img` | Image | Outline Button Icons | input.css |
+| `.btn-outline:hover` | Button | Outline Button Hover State | input.css |
+| `.info-card` | Card | Info Card | input.css |
+| `.info-card-title` | Text | Info Card Title Text | input.css |
+| `.info-card-body` | Text | Info Card Body Text | input.css |
+| `.info-card-workspace` | Image | Info Card Workspace Image | input.css |
+| `.info-card-frame` | Icon | Info Card Icon | input.css |
+| `.blog-news-card` | Card | Blog News Card | input.css |
+| `.blog-news-card-workspace` | Image | Blog News Card Workspace Image | input.css |
+| `.blog-news-card-header` | Container | Blog News Card Header Container | input.css |
+| `.blog-news-card-frame` | Icon | Blog News Card Icon | input.css |
+| `.blog-news-card-title` | Text | Blog News Card Title Text | input.css |
+| `.circular-images` | Image | Circular Image | input.css |
+| `.small-section-header` | Container | Small Section Header Container | input.css |
+| `.small-section-header-title` | Text | Small Section Header Title Text | input.css |
+| `.small-section-header-subtitle` | Text | Small Section Body Text | input.css |
 
 
 > ⚠️ Every new utility **must** be added to this table.
@@ -432,7 +452,181 @@ The detailed explanation lives in the template below.
   * `pt-[20px]`
 
 
+### Secondary Button
+- **Class name:** `.btn-secondary`
+- **Layer:** components 
+- **Category:** Button 
+- **Used for:** Secondary Action Buttons
+- **Do NOT use for:** Any, other than the Secondary Action Buttons.
+- **Tailwind utilities applied:**
+    * `text-brand-charcoal` 
+    * `px-10`
+    * `py-6`
+    * `rounded-md`
+    * `text-sm` 
+    * `border-2`
+    * `border-brand-gray`
 
 
+### Outline Button
+- **Class name:** `.btn-outline`
+- **Layer:** components
+- **Category:** Button
+- **Used for:** Outline Buttons
+- **Do NOT use for:** Any, other than the Outline Buttons
+- **Tailwind utilities applied:**
+  - `text-brand-white `    
+  - `px-4`
+  - `py-2`
+  - `rounded-lg`
+  - `text-sm`
+  - `border-2 `
+  - `border-brand-purple`
+---
+
+### Info Card
+- **Class name:** `.info-card`
+- **Layer:** components
+- **Category:** Card
+- **Used for:** Info Card Components
+- **Do NOT use for:** Any, other than the Info Card
+- **Tailwind utilities applied:**
+  - `px-6 `        
+  - `py-4`
+  - `shadow-md`
+  - `rounded-xl`
+  - `max-w-[350px]`
+  - `min-h-[550px] `
+  - ` w-full `
+---
+### Info Card Workspace Image
+- **Class name:** `.info-card-workspace`
+- **Layer:** components
+- **Category:** Image
+- **Used for:** Info Card's Workspace Image
+- **Do NOT use for:** Any, other than the Info Card's Workspace Image
+- **Tailwind utilities applied:**
+  - `w-full`           
+  - `h-full`
+  - `mt-4`
+  - `rounded-md`
+
+---
+
+### Info Card Title 
+- **Class name:** `.info-card-title`
+- **Layer:** components
+- **Category:** Text
+- **Used for:** Info Card Title's Text
+- **Do NOT use for:** Any Text, other than the Info Card's Title.
+- **Tailwind utilities applied:**
+  - `text-xl`                
+  - `font-semibold`
+  - `mt-2`
+  - `mb-4`
+  - `text-left`
+  - `text-brand-charcoal `
+  - `px-1 `
+  - `py-1`
+---
+
+### Info Card Frame
+- **Class name:** `.info-card-frame`
+- **Layer:** components
+- **Category:** Icon
+- **Used for:** Info Card's Icon
+- **Do NOT use for:** Any Text, other than the Info Card's Icon.
+- **Tailwind utilities applied:**
+  - `w-20`                  
+  - `h-10 `
+  - `mt-1`
+
+---
 
 
+### Info Card Body
+- **Class name:** `.info-card-body`
+- **Layer:** components
+- **Category:** Text
+- **Used for:** Info Card's Body Text
+- **Do NOT use for:** Any Text, other than the Info Card's Body.
+- **Tailwind utilities applied:**
+  - `text-base`                    
+  - `font-normal `
+  - `text-left`
+  - `text-brand-charcoal `
+ 
+---
+
+
+### Blog News Card
+- **Class name:** `.blog-news-card`
+- **Layer:** components
+- **Category:** Card
+- **Used for:** Blog News Card's Main Container
+- **Do NOT use for:** Any Card Container, other than the Blog News Card.
+- **Tailwind utilities applied:**
+  - `px-4`            ;            
+  - `py-5 `
+  - `shadow-md`
+  - `rounded-xl`
+  - `max-w-[500px]`
+  - ` w-full `
+  - `px-1 `
+  - `py-1`
+---
+
+
+### Blog News Card Title
+- **Class name:** `.blog-news-card-header`
+- **Layer:** components
+- **Category:** Text
+- **Used for:** Blog News Card's Header Title
+- **Do NOT use for:** Any Card Title, other than the Blog News Card Header Title.
+- **Tailwind utilities applied:**
+  - `text-sm`                    
+  - `font-semibold `
+  - `text-left`
+  - `text-brand-gray`
+
+---
+
+
+### Blog News Card Frame
+- **Class name:** `.blog-news-card-frame`
+- **Layer:** components
+- **Category:** Icon
+- **Used for:** Blog News Card's Icon
+- **Do NOT use for:** Any Card Icon, other than the Blog News Card Icon.
+- **Tailwind utilities applied:**
+  - `w-8`            ;            
+  - `h-2`
+  - `m-1`
+---
+
+### Blog News Card Workspace
+- **Class name:** `.blog-news-card-workspace`
+- **Layer:** components
+- **Category:** Image
+- **Used for:** Blog News Card's Workspace Image
+- **Do NOT use for:** Any Card Image, other than the Blog News Card Workspace Image.
+- **Tailwind utilities applied:**
+  - `w-full`                     
+  - `h-48`
+  - `mt-4`
+  - `mb-1`
+  - `rounded-md`
+---
+
+### Circular Image
+- **Class name:** `.circular-images`
+- **Layer:** components
+- **Category:** Image
+- **Used for:** Circular Images
+- **Do NOT use for:** Any Image not a Circular Image.
+- **Tailwind utilities applied:**
+  - `max-w-[70px]`                       
+  - `max-h-[70px]`
+  - `rounded-full`
+  
+---
