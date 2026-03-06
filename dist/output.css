@@ -595,9 +595,7 @@ body {
 }
 
 .hero-btn {
-  border-radius: 0.125rem;
   background-color: rgb(0 194 168 / 0.2);
-  padding: 0.375rem;
   font-size: 0.875rem;
   line-height: 1.25rem;
   font-weight: 500;
@@ -1031,18 +1029,6 @@ body {
 
 .col-span-2 {
   grid-column: span 2 / span 2;
-
-.section {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  --tw-bg-opacity: 1;
-  background-color: rgb(140 82 255 / var(--tw-bg-opacity, 1));
-  padding: 3rem;
-  text-align: center;
-  --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity, 1));
 }
 
 .my-4 {
