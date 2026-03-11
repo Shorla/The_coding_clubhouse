@@ -988,12 +988,61 @@ body {
   color: rgb(55 65 81 / var(--tw-text-opacity, 1));
 }
 
+.col-span-2 {
+  grid-column: span 2 / span 2;
+}
+
+.my-4 {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.mr-2 {
+  margin-right: 0.5rem;
+}
+
+.mr-4 {
+  margin-right: 1rem;
+}
+
+.mr-5 {
+  margin-right: 1.25rem;
+}
+
+.mt-1\.5 {
+  margin-top: 0.375rem;
+}
+
 .mt-2 {
   margin-top: 0.5rem;
 }
 
+.mt-5 {
+  margin-top: 1.25rem;
+}
+
+.block {
+  display: block;
+}
+
 .flex {
   display: flex;
+}
+
+.h-2 {
+  height: 0.5rem;
+}
+
+.h-auto {
+  height: auto;
+}
+
+.w-3 {
+  width: 0.75rem;
+}
+
+.w-32 {
+  width: 8rem;
 }
 
 .justify-start {
@@ -1002,6 +1051,14 @@ body {
 
 .justify-end {
   justify-content: flex-end;
+}
+
+.gap-1 {
+  gap: 0.25rem;
+}
+
+.gap-4 {
+  gap: 1rem;
 }
 
 .space-y-6 > :not([hidden]) ~ :not([hidden]) {
@@ -1115,6 +1172,11 @@ body {
   color: rgb(40 105 226 / var(--tw-text-opacity, 1));
 }
 
+.text-brand-charcoal {
+  --tw-text-opacity: 1;
+  color: rgb(45 45 45 / var(--tw-text-opacity, 1));
+}
+
 .text-brand-coral50 {
   --tw-text-opacity: 1;
   color: rgb(252 234 232 / var(--tw-text-opacity, 1));
@@ -1141,4 +1203,27 @@ body {
 .hover\:bg-brand-yellow:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(255 212 71 / var(--tw-bg-opacity, 1));
+}
+
+.hover\:text-brand-white:hover {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity, 1));
+}
+
+@media (min-width: 768px) {
+  .md\:m-4 {
+    margin: 1rem;
+  }
+
+  .md\:mt-0 {
+    margin-top: 0px;
+  }
+
+  .md\:flex {
+    display: flex;
+  }
+
+  .md\:justify-evenly {
+    justify-content: space-evenly;
+  }
 }
