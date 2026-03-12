@@ -20,8 +20,22 @@
 }
 
 @layer components {
+  .hero-section {
+    @apply bg-brand-purple text-white flex flex-col items-center justify-center text-center
+  }
+  .hero-header-text {
+   @apply text-5xl font-semibold mb-6
+  }
+  .hero-btn {
+    @apply text-sm font-medium bg-brand-aqua/20 text-brand-aqua p-1.5 rounded-sm;
+ }
   .btn-primary {
-    @apply text-brand-white px-4 py-2 rounded-lg text-sm;
+    @apply text-brand-white px-6 py-3 rounded-lg text-sm;
+  }
+
+  .btn-primary:hover,
+  .btn-primary:focus {
+    @apply bg-brand-white text-black;
   }
   .btn-secondary {
     /* Create a with secondary color. Add hover + focus states.*/
@@ -113,56 +127,131 @@
     @apply mt-6 text-lg font-medium leading-relaxed text-brand-purple; /* Changed to brand color */
   }
 
-  .contact-form {
+ .contact-form {
     @apply w-full max-w-3xl bg-brand-white rounded-lg shadow-md p-8;
-
   }
   .contact-title {
-    @apply text-2xl font-bold mb-4 text-gray-800; 
+    @apply text-2xl font-bold mb-4 text-brand-charcoal;
   }
   .contact-form__field {
     @apply h-[3.9375rem] min-h-[2.75rem]
          rounded border-2 border-brand-neutralWhite
-        
-         bg-white flex flex-col justify-center gap-2
+
+         bg-brand-white flex flex-col justify-center gap-2
          focus-within:outline-none focus-within:ring-2 focus-within:ring-brand-purple;
   }
 
   .contact-form__innerLabel {
-    @apply text-lg font-medium leading-none;
-  }
-  .contact-form__textarea {
-    @apply w-full rounded border-2 border-brand-neutralWhite
-         bg-white flex flex-col justify-center gap-2
-         focus-within:outline-none focus-within:ring-2 focus-within:ring-brand-purple;
+    @apply text-2xl font-medium leading-none text-brand-charcoal;
   }
 
   .contact-form__input {
     @apply w-full border-0 p-0 bg-transparent text-lg
          focus:outline-none focus:ring-0
-         placeholder:text-gray-400;
+         placeholder:text-brand-gray;
   }
   .contact-form__textareaField {
-    @apply w-full rounded border border-brand-neutralWhite bg-white
+    @apply w-full rounded border-2 border-brand-neutralWhite bg-brand-white
          px-3 pt-3 pb-4
          min-h-[11rem]
          flex flex-col gap-2
-         focus-within:border-brand-purple focus-within:ring-2 focus-within:ring-brand-purple;
-  }
-
-  .contact-form__innerLabel {
-    @apply text-2xl font-medium leading-none text-gray-800;
+         focus-within:border-brand-purple focus-within:ring-1 focus-within:ring-brand-purple;
   }
 
   .contact-form__textarea {
     @apply w-full flex-1 resize-none
          border-0 bg-transparent p-0
-         text-lg text-gray-700
-         placeholder:text-gray-300
+         text-lg text-brand-charcoal
+         placeholder:text-brand-gray
          focus:outline-none focus:ring-0;
   }
 
   .contact-form__counter {
-    @apply mt-2 text-right text-lg text-gray-700;
+    @apply mt-2 text-right text-lg text-brand-charcoal;
   }
+  .girls-card {
+  @apply w-[604px] h-[388px] bg-[#A273FF]  rounded-2xl overflow-hidden ;
+}
+  .camera-pic {
+    @apply w-[83px] h-[33px] pt-[2px] pb-[1px];
+  }
+  .girls-pic {
+    @apply w-[604px] h-[315px]  object-cover;
+  }
+  .girls-top {
+    @apply h-[73px] w-[604px] flex items-start gap-[10px] px-3 pt-[20px];
+  }
+}
+
+  /* Nav Bar classes*/
+  .navbar-container {
+    @apply bg-brand-purple 
+    text-brand-white text-center 
+    w-full h-auto 
+    flex justify-between sticky
+    top-0 m-0 p-2;
+  }
+  .hamburger-icon {
+    @apply mt-2 cursor-pointer md:hidden;
+  }
+  .navbar-links-wrapper {
+    @apply text-sm text-center 
+    font-sans font-medium
+    hidden md:flex gap-2 lg:gap-4
+    px-2 py-2 
+    mr-4;
+  }
+  .navbar-links {
+    @apply p-2 hover:text-brand-yellow;
+  }
+ .btn-container {
+    @apply grid md:flex md:justify-center pb-4 mt-5 md:mt-8 text-brand-charcoal;
+  }
+ .btn-icon-wrapper{
+  @apply flex gap-1 justify-center;
+ }
+ 
+  /* Footer Classes*/
+  .footer-container {
+    @apply bg-brand-white text-brand-charcoal
+    w-full 
+    px-10 pt-20;
+  }
+  .footer-webpages-link {
+    @apply grid grid-cols-3 md:flex
+    text-sm font-bold py-5;
+  }
+  .media-icons {
+    @apply flex gap-10 md:col-span-3 md:py-5;
+  }
+  .newsletter {
+    @apply block md:flex lg:ml-5 my-10 justify-center;
+  }
+  .newsletter-h3 {
+    @apply font-bold tracking-wider mb-2 mr-6;
+  }
+  .copyright {
+    @apply block text-gray-400 text-sm pb-10 pt-5 md:text-center;
+  }
+
+  /* Expand our impact */
+  .impact-card-background {
+    @apply w-auto h-auto text-center
+  bg-brand-purple bg-cover bg-blend-soft-light 
+    hover:bg-blend-darken 
+    shadow-xl rounded-lg  
+    mx-8 md:mx-20 mt-20 mb-2 p-8;
+  }
+  .impact-card-h1 {
+    @apply font-bold text-xl md:text-3xl text-brand-charcoal font-heading tracking-wide;
+  }
+  .tiny-codes-snippet {
+    @apply text-right text-sm flex justify-end text-brand-blue mb-10;
+  .section {
+  @apply bg-brand-purple text-white p-12 flex flex-col items-center justify-center text-center;
+}
+.hear {
+  @apply text-5xl font-heading font-thin;
+}
+
 }
