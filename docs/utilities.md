@@ -86,6 +86,26 @@ Use this table to quickly search and understand available utilities.
 | `.small-section-header` | Container | Small Section Header Container | input.css |
 | `.small-section-header-title` | Text | Small Section Header Title Text | input.css |
 | `.small-section-header-subtitle` | Text | Small Section Body Text | input.css |
+| `.btn-secondary` | Button | Secondary action button | input.css |
+| `.btn-secondary:hover` | Button | Secondary Button Hover State | input.css |
+| `.btn-secondary:focus` | Button | Secondary Button Focus State | input.css |
+| `.btn-outline` | Button | Outline Action Button | input.css |
+| `.btn-outline-img` | Image | Outline Button Icons | input.css |
+| `.btn-outline:hover` | Button | Outline Button Hover State | input.css |
+| `.info-card` | Card | Info Card | input.css |
+| `.info-card-title` | Text | Info Card Title Text | input.css |
+| `.info-card-body` | Text | Info Card Body Text | input.css |
+| `.info-card-workspace` | Image | Info Card Workspace Image | input.css |
+| `.info-card-frame` | Icon | Info Card Icon | input.css |
+| `.blog-news-card` | Card | Blog News Card | input.css |
+| `.blog-news-card-workspace` | Image | Blog News Card Workspace Image | input.css |
+| `.blog-news-card-header` | Container | Blog News Card Header Container | input.css |
+| `.blog-news-card-frame` | Icon | Blog News Card Icon | input.css |
+| `.blog-news-card-title` | Text | Blog News Card Title Text | input.css |
+| `.circular-images` | Image | Circular Image | input.css |
+| `.small-section-header` | Container | Small Section Header Container | input.css |
+| `.small-section-header-title` | Text | Small Section Header Title Text | input.css |
+| `.small-section-header-subtitle` | Text | Small Section Body Text | input.css |
 
 
 > ⚠️ Every new utility **must** be added to this table.
