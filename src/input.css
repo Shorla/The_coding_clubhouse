@@ -24,8 +24,12 @@
     @apply relative  text-white flex flex-col items-center justify-center text-center
   }
   .hero-header-text {
-   @apply text-5xl font-semibold mb-6 my-6 md:my-8 lg:my-10;
+   @apply text-4xl font-heading mb-6 my-6 md:my-8 lg:my-10;
   }
+  .hero-p {
+    @apply font-sans p-5 text-2xl;
+  }
+
   .hero-btn {
     @apply text-sm font-light bg-brand-white/10 text-brand-aqua p-1.5 px-4 py-2 rounded-md ;
  }
@@ -54,8 +58,11 @@
   .btn-outline:hover {
     @apply bg-brand-purple text-white;
   }
+    .info-section {
+    @apply text-center p-10 bg-no-repeat md:justify-center;
+  }
   .info-card {
-    @apply px-6 py-4 shadow-md rounded-xl max-w-[350px] min-h-[550px] w-full;
+    @apply px-6 py-4 shadow-md rounded-xl max-w-[350px] min-h-[550px] w-full h-fit;
   }
   .info-card-title {
     @apply text-xl font-semibold mt-2 mb-4  text-left text-brand-charcoal px-1 py-1;
@@ -262,3 +269,20 @@
 }
 
 }
+
+ /* cards section */
+  .intro-cards-container{
+    @apply m-10 mt-2 text-brand-charcoal text-left block md:flex gap-8;
+  }
+  .card-box-wrapper {
+    @apply grid md:grid-cols-2 gap-2 p-2;
+  }
+  .card-box {
+    @apply border-2 border-brand-gray p-2 my-1 rounded-xl gap-2;
+  }
+  .card-bg{
+    @apply mx-8 md:mx-20 mt-20 mb-2 w-auto h-auto shadow-xl rounded-lg bg-brand-purple bg-no-repeat bg-cover text-center justify-center bg-blend-soft-light hover:bg-blend-darken transition ease-out duration-500;
+  }
+  .bg-circle{
+    @apply w-16 h-16 rounded-full bg-brand-purple50 absolute;
+  } 

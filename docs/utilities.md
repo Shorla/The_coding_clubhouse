@@ -31,82 +31,88 @@ Nothing here auto-updates.
 
 Use this table to quickly search and understand available utilities.
 
-| Class Name                     | Category       | Description                                         | File      |
-| ------------------------------ | -------------- | --------------------------------------------------- | --------- |
-| `.btn-primary`                 | Button         | Primary action button                               | input.css |
-| `.btn-secondary`               | Button         | Secondary action button                             | input.css |
-| `.profile-card`                | Card           | Main profile card container                         | input.css |
-| `.profile-card__avatar-wrap`   | Card           | Avatar wrapper with shadow                          | input.css |
-| `.profile-card__avatar`        | Card           | Avatar image styling                                | input.css |
-| `.profile-card__name`          | Card           | Profile name text                                   | input.css |
-| `.profile-card__role`          | Card           | Profile role/title text                             | input.css |
-| `.profile-card__bio`           | Card           | Profile biography text                              | input.css |
-| `.contact-form`                | Form           | Main contact form container                         | input.css |
-| `.contact-title`               | Form           | Contact form heading/title                          | input.css |
-| `.contact-form__field`         | Form Field     | Input wrapper (label-inside + focus ring)           | input.css |
-| `.contact-form__innerLabel`    | Form Field     | Label text inside input/textarea wrapper            | input.css |
-| `.contact-form__input`         | Form Field     | The actual `<input>` element (borderless)           | input.css |
-| `.contact-form__textareaField` | Form Field     | Textarea wrapper (label-inside + focus ring)        | input.css |
-| `.contact-form__textarea`      | Form Field     | The actual `<textarea>` element (borderless, grows) | input.css |
-| `.contact-form__counter`       | Form Field     | Bottom-right character counter text                 | input.css |
-| `.girls-card`                  | Card           | Hero Stack                                          | input.css |
-| `.navbar-container`            | Navbar         | Navbar background                                   | input.css |
-| `.hamburger-icon`              | Navbar         | Hamburger                                           | input.css |
-| `.navbar-links-wrapper`        | Navbar         | Contains Link to Webpages                           | input.css |
-| `.navbar-links`                | Navbar         | Link to Webpages                                    | input.css |
-| `.footer-container`            | Footer         | Footer Container                                    | input.css |
-| `.footer-webpages-link`        | Footer         | LInk to webpages                                    | input.css |
-| `.media-icons`                 | Footer         | Social media icons                                  | input.css |
-| `.newsletter`                  | Footer         | Newsletter subscription                             | input.css |
-| `.newsletter-h3`               | Footer         | Newsletter subscription                             | input.css |
-| `.impact-card-background`      | Impact section | Impact section Background                           | input.css |
-| `.impact-card-h1`              | Impact section | Impact text                                         | input.css |
-| `.tiny-codes-snippet`          | Impact section | tiny codes in bg                                    | input.css |
-| `.hero-background`             | Hero section   | Hero section bg                                     | input.css |
-| `.hero-h1`                     | Hero section   | Large Heading text                                  | input.css |
-| `.hero-p`                      | Hero section   | Hero intro texts                                    | input.css |
-| `.btn-icon-wrapper`            | Button         | Wrap icons and buttons                              | input.css |
-| `.btn-container`               | Buttons        | Buttton container                                   | input.css || `.btn-secondary` | Button | Secondary action button | input.css |
-| `.btn-secondary:hover` | Button | Secondary Button Hover State | input.css |
-| `.btn-secondary:focus` | Button | Secondary Button Focus State | input.css |
-| `.btn-outline` | Button | Outline Action Button | input.css |
-| `.btn-outline-img` | Image | Outline Button Icons | input.css |
-| `.btn-outline:hover` | Button | Outline Button Hover State | input.css |
-| `.info-card` | Card | Info Card | input.css |
-| `.info-card-title` | Text | Info Card Title Text | input.css |
-| `.info-card-body` | Text | Info Card Body Text | input.css |
-| `.info-card-workspace` | Image | Info Card Workspace Image | input.css |
-| `.info-card-frame` | Icon | Info Card Icon | input.css |
-| `.blog-news-card` | Card | Blog News Card | input.css |
-| `.blog-news-card-workspace` | Image | Blog News Card Workspace Image | input.css |
-| `.blog-news-card-header` | Container | Blog News Card Header Container | input.css |
-| `.blog-news-card-frame` | Icon | Blog News Card Icon | input.css |
-| `.blog-news-card-title` | Text | Blog News Card Title Text | input.css |
-| `.circular-images` | Image | Circular Image | input.css |
-| `.small-section-header` | Container | Small Section Header Container | input.css |
-| `.small-section-header-title` | Text | Small Section Header Title Text | input.css |
-| `.small-section-header-subtitle` | Text | Small Section Body Text | input.css |
-| `.btn-secondary` | Button | Secondary action button | input.css |
-| `.btn-secondary:hover` | Button | Secondary Button Hover State | input.css |
-| `.btn-secondary:focus` | Button | Secondary Button Focus State | input.css |
-| `.btn-outline` | Button | Outline Action Button | input.css |
-| `.btn-outline-img` | Image | Outline Button Icons | input.css |
-| `.btn-outline:hover` | Button | Outline Button Hover State | input.css |
-| `.info-card` | Card | Info Card | input.css |
-| `.info-card-title` | Text | Info Card Title Text | input.css |
-| `.info-card-body` | Text | Info Card Body Text | input.css |
-| `.info-card-workspace` | Image | Info Card Workspace Image | input.css |
-| `.info-card-frame` | Icon | Info Card Icon | input.css |
-| `.blog-news-card` | Card | Blog News Card | input.css |
-| `.blog-news-card-workspace` | Image | Blog News Card Workspace Image | input.css |
-| `.blog-news-card-header` | Container | Blog News Card Header Container | input.css |
-| `.blog-news-card-frame` | Icon | Blog News Card Icon | input.css |
-| `.blog-news-card-title` | Text | Blog News Card Title Text | input.css |
-| `.circular-images` | Image | Circular Image | input.css |
-| `.small-section-header` | Container | Small Section Header Container | input.css |
-| `.small-section-header-title` | Text | Small Section Header Title Text | input.css |
-| `.small-section-header-subtitle` | Text | Small Section Body Text | input.css |
-
+| Class Name                       | Category       | Description                                         | File      |
+| -------------------------------- | -------------- | --------------------------------------------------- | --------- |
+| `.btn-primary`                   | Button         | Primary action button                               | input.css |
+| `.btn-secondary`                 | Button         | Secondary action button                             | input.css |
+| `.profile-card`                  | Card           | Main profile card container                         | input.css |
+| `.profile-card__avatar-wrap`     | Card           | Avatar wrapper with shadow                          | input.css |
+| `.profile-card__avatar`          | Card           | Avatar image styling                                | input.css |
+| `.profile-card__name`            | Card           | Profile name text                                   | input.css |
+| `.profile-card__role`            | Card           | Profile role/title text                             | input.css |
+| `.profile-card__bio`             | Card           | Profile biography text                              | input.css |
+| `.contact-form`                  | Form           | Main contact form container                         | input.css |
+| `.contact-title`                 | Form           | Contact form heading/title                          | input.css |
+| `.contact-form__field`           | Form Field     | Input wrapper (label-inside + focus ring)           | input.css |
+| `.contact-form__innerLabel`      | Form Field     | Label text inside input/textarea wrapper            | input.css |
+| `.contact-form__input`           | Form Field     | The actual `<input>` element (borderless)           | input.css |
+| `.contact-form__textareaField`   | Form Field     | Textarea wrapper (label-inside + focus ring)        | input.css |
+| `.contact-form__textarea`        | Form Field     | The actual `<textarea>` element (borderless, grows) | input.css |
+| `.contact-form__counter`         | Form Field     | Bottom-right character counter text                 | input.css |
+| `.girls-card`                    | Card           | Hero Stack                                          | input.css |
+| `.navbar-container`              | Navbar         | Navbar background                                   | input.css |
+| `.hamburger-icon`                | Navbar         | Hamburger                                           | input.css |
+| `.navbar-links-wrapper`          | Navbar         | Contains Link to Webpages                           | input.css |
+| `.navbar-links`                  | Navbar         | Link to Webpages                                    | input.css |
+| `.footer-container`              | Footer         | Footer Container                                    | input.css |
+| `.footer-webpages-link`          | Footer         | LInk to webpages                                    | input.css |
+| `.media-icons`                   | Footer         | Social media icons                                  | input.css |
+| `.newsletter`                    | Footer         | Newsletter subscription                             | input.css |
+| `.newsletter-h3`                 | Footer         | Newsletter subscription                             | input.css |
+| `.impact-card-background`        | Impact section | Impact section Background                           | input.css |
+| `.impact-card-h1`                | Impact section | Impact text                                         | input.css |
+| `.tiny-codes-snippet`            | Impact section | tiny codes in bg                                    | input.css |
+| `.hero-background`               | Hero section   | Hero section bg                                     | input.css |
+| `.hero-h1`                       | Hero section   | Large Heading text                                  | input.css |
+| `.hero-p`                        | Hero section   | Hero intro texts                                    | input.css |
+| `.btn-icon-wrapper`              | Button         | Wrap icons and buttons                              | input.css |
+| `.btn-container`                 | Buttons        | Buttton container                                   | input.css |
+| `.btn-secondary`                 | Button         | Secondary action button                             | input.css |
+| `.btn-secondary:hover`           | Button         | Secondary Button Hover State                        | input.css |
+| `.btn-secondary:focus`           | Button         | Secondary Button Focus State                        | input.css |
+| `.btn-outline`                   | Button         | Outline Action Button                               | input.css |
+| `.btn-outline-img`               | Image          | Outline Button Icons                                | input.css |
+| `.btn-outline:hover`             | Button         | Outline Button Hover State                          | input.css |
+| `.info-section`                  | Card           | Info Card section                                   | input.css |
+| `.info-card`                     | Card           | Info Card                                           | input.css |
+| `.info-card-title`               | Text           | Info Card Title Text                                | input.css |
+| `.info-card-body`                | Text           | Info Card Body Text                                 | input.css |
+| `.info-card-workspace`           | Image          | Info Card Workspace Image                           | input.css |
+| `.info-card-frame`               | Icon           | Info Card Icon                                      | input.css |
+| `.blog-news-card`                | Card           | Blog News Card                                      | input.css |
+| `.blog-news-card-workspace`      | Image          | Blog News Card Workspace Image                      | input.css |
+| `.blog-news-card-header`         | Container      | Blog News Card Header Container                     | input.css |
+| `.blog-news-card-frame`          | Icon           | Blog News Card Icon                                 | input.css |
+| `.blog-news-card-title`          | Text           | Blog News Card Title Text                           | input.css |
+| `.circular-images`               | Image          | Circular Image                                      | input.css |
+| `.small-section-header`          | Container      | Small Section Header Container                      | input.css |
+| `.small-section-header-title`    | Text           | Small Section Header Title Text                     | input.css |
+| `.small-section-header-subtitle` | Text           | Small Section Body Text                             | input.css |
+| `.btn-secondary`                 | Button         | Secondary action button                             | input.css |
+| `.btn-secondary:hover`           | Button         | Secondary Button Hover State                        | input.css |
+| `.btn-secondary:focus`           | Button         | Secondary Button Focus State                        | input.css |
+| `.btn-outline`                   | Button         | Outline Action Button                               | input.css |
+| `.btn-outline-img`               | Image          | Outline Button Icons                                | input.css |
+| `.btn-outline:hover`             | Button         | Outline Button Hover State                          | input.css |
+| `.info-card`                     | Card           | Info Card                                           | input.css |
+| `.info-card-title`               | Text           | Info Card Title Text                                | input.css |
+| `.info-card-body`                | Text           | Info Card Body Text                                 | input.css |
+| `.info-card-workspace`           | Image          | Info Card Workspace Image                           | input.css |
+| `.info-card-frame`               | Icon           | Info Card Icon                                      | input.css |
+| `.blog-news-card`                | Card           | Blog News Card                                      | input.css |
+| `.blog-news-card-workspace`      | Image          | Blog News Card Workspace Image                      | input.css |
+| `.blog-news-card-header`         | Container      | Blog News Card Header Container                     | input.css |
+| `.blog-news-card-frame`          | Icon           | Blog News Card Icon                                 | input.css |
+| `.blog-news-card-title`          | Text           | Blog News Card Title Text                           | input.css |
+| `.circular-images`               | Image          | Circular Image                                      | input.css |
+| `.small-section-header`          | Container      | Small Section Header Container                      | input.css |
+| `.small-section-header-title`    | Text           | Small Section Header Title Text                     | input.css |
+| `.small-section-header-subtitle` | Text           | Small Section Body Text                             | input.css |
+| `.intro-cards-container`         | card           | contain the introduction section                    | input.css |
+| `.card-box-wrapper`              | card           | wrap the segments for the intro                     | input.css |
+| `.card-box`                      | card           | for the intro boxes                                 | input.css |
+| `.card-bg`                       | card           | for the colour of the different boxes               | input.css |
+| `.bg-circle`                     | icon           | for the small circles in bg                         | input.css |
 
 > ⚠️ Every new utility **must** be added to this table.
 
@@ -748,94 +754,116 @@ profile displays - **Tailwind utilities applied:** - `w-full` - `max-w-sm` -
 ---
 ```
 
-  * `w-[604px]`
-  * `h-[388px]`
-  * `bg-[#A273FF]`
-  * `rounded-2xl`
-  * `overflow-hidden`
-  * `w-[83px]`
-  * `h-[33px]`
-  * `pt-[2px]`
-  * `pb-[1px]`
-  * `h-[315px]`
-  * `object-cover`
-  * `h-[73px]`
-  * `flex`
-  * `items-start`
-  * `gap-[10px]`
-  * `px-3`
-  * `pt-[20px]`
-
+- `w-[604px]`
+- `h-[388px]`
+- `bg-[#A273FF]`
+- `rounded-2xl`
+- `overflow-hidden`
+- `w-[83px]`
+- `h-[33px]`
+- `pt-[2px]`
+- `pb-[1px]`
+- `h-[315px]`
+- `object-cover`
+- `h-[73px]`
+- `flex`
+- `items-start`
+- `gap-[10px]`
+- `px-3`
+- `pt-[20px]`
 
 ### Secondary Button
+
 - **Class name:** `.btn-secondary`
-- **Layer:** components 
-- **Category:** Button 
+- **Layer:** components
+- **Category:** Button
 - **Used for:** Secondary Action Buttons
 - **Do NOT use for:** Any, other than the Secondary Action Buttons.
 - **Tailwind utilities applied:**
-    * `text-brand-charcoal` 
-    * `px-10`
-    * `py-6`
-    * `rounded-md`
-    * `text-sm` 
-    * `border-2`
-    * `border-brand-gray`
-
+  - `text-brand-charcoal`
+  - `px-10`
+  - `py-6`
+  - `rounded-md`
+  - `text-sm`
+  - `border-2`
+  - `border-brand-gray`
 
 ### Outline Button
+
 - **Class name:** `.btn-outline`
 - **Layer:** components
 - **Category:** Button
 - **Used for:** Outline Buttons
 - **Do NOT use for:** Any, other than the Outline Buttons
 - **Tailwind utilities applied:**
-  - `text-brand-white `    
+  - `text-brand-white `
   - `px-4`
   - `py-2`
   - `rounded-lg`
   - `text-sm`
   - `border-2 `
   - `border-brand-purple`
+
+---
+
+### Info Section
+
+- **Class name:** `.info-section`
+- **Layer:** components
+- **Category:** Card
+- **Used for:** Info Card Components
+- **Do NOT use for:** Any, other than the Info Card
+- **Tailwind utilities applied:**
+  - `text-center`
+  - `p-10`
+  - `bg-no-repeat`
+  - `md:justify-center`
+
 ---
 
 ### Info Card
+
 - **Class name:** `.info-card`
 - **Layer:** components
 - **Category:** Card
 - **Used for:** Info Card Components
 - **Do NOT use for:** Any, other than the Info Card
 - **Tailwind utilities applied:**
-  - `px-6 `        
+  - `px-6 `
   - `py-4`
   - `shadow-md`
   - `rounded-xl`
   - `max-w-[350px]`
   - `min-h-[550px] `
-  - ` w-full `
+  - `w-full`
+  - `h-fit`
+
 ---
+
 ### Info Card Workspace Image
+
 - **Class name:** `.info-card-workspace`
 - **Layer:** components
 - **Category:** Image
 - **Used for:** Info Card's Workspace Image
 - **Do NOT use for:** Any, other than the Info Card's Workspace Image
 - **Tailwind utilities applied:**
-  - `w-full`           
+  - `w-full`
   - `h-full`
   - `mt-4`
   - `rounded-md`
 
 ---
 
-### Info Card Title 
+### Info Card Title
+
 - **Class name:** `.info-card-title`
 - **Layer:** components
 - **Category:** Text
 - **Used for:** Info Card Title's Text
 - **Do NOT use for:** Any Text, other than the Info Card's Title.
 - **Tailwind utilities applied:**
-  - `text-xl`                
+  - `text-xl`
   - `font-semibold`
   - `mt-2`
   - `mb-4`
@@ -843,105 +871,206 @@ profile displays - **Tailwind utilities applied:** - `w-full` - `max-w-sm` -
   - `text-brand-charcoal `
   - `px-1 `
   - `py-1`
+
 ---
 
 ### Info Card Frame
+
 - **Class name:** `.info-card-frame`
 - **Layer:** components
 - **Category:** Icon
 - **Used for:** Info Card's Icon
 - **Do NOT use for:** Any Text, other than the Info Card's Icon.
 - **Tailwind utilities applied:**
-  - `w-20`                  
+  - `w-20`
   - `h-10 `
   - `mt-1`
 
 ---
 
-
 ### Info Card Body
+
 - **Class name:** `.info-card-body`
 - **Layer:** components
 - **Category:** Text
 - **Used for:** Info Card's Body Text
 - **Do NOT use for:** Any Text, other than the Info Card's Body.
 - **Tailwind utilities applied:**
-  - `text-base`                    
+  - `text-base`
   - `font-normal `
   - `text-left`
   - `text-brand-charcoal `
- 
+
 ---
 
-
 ### Blog News Card
+
 - **Class name:** `.blog-news-card`
 - **Layer:** components
 - **Category:** Card
 - **Used for:** Blog News Card's Main Container
 - **Do NOT use for:** Any Card Container, other than the Blog News Card.
 - **Tailwind utilities applied:**
-  - `px-4`            ;            
+  - `px-4` ;
   - `py-5 `
   - `shadow-md`
   - `rounded-xl`
   - `max-w-[500px]`
-  - ` w-full `
+  - `w-full`
   - `px-1 `
   - `py-1`
+
 ---
 
-
 ### Blog News Card Title
+
 - **Class name:** `.blog-news-card-header`
 - **Layer:** components
 - **Category:** Text
 - **Used for:** Blog News Card's Header Title
 - **Do NOT use for:** Any Card Title, other than the Blog News Card Header Title.
 - **Tailwind utilities applied:**
-  - `text-sm`                    
+  - `text-sm`
   - `font-semibold `
   - `text-left`
   - `text-brand-gray`
 
 ---
 
-
 ### Blog News Card Frame
+
 - **Class name:** `.blog-news-card-frame`
 - **Layer:** components
 - **Category:** Icon
 - **Used for:** Blog News Card's Icon
 - **Do NOT use for:** Any Card Icon, other than the Blog News Card Icon.
 - **Tailwind utilities applied:**
-  - `w-8`            ;            
+  - `w-8` ;
   - `h-2`
   - `m-1`
+
 ---
 
 ### Blog News Card Workspace
+
 - **Class name:** `.blog-news-card-workspace`
 - **Layer:** components
 - **Category:** Image
 - **Used for:** Blog News Card's Workspace Image
 - **Do NOT use for:** Any Card Image, other than the Blog News Card Workspace Image.
 - **Tailwind utilities applied:**
-  - `w-full`                     
+  - `w-full`
   - `h-48`
   - `mt-4`
   - `mb-1`
   - `rounded-md`
+
 ---
 
 ### Circular Image
+
 - **Class name:** `.circular-images`
 - **Layer:** components
 - **Category:** Image
 - **Used for:** Circular Images
 - **Do NOT use for:** Any Image not a Circular Image.
 - **Tailwind utilities applied:**
-  - `max-w-[70px]`                       
+  - `max-w-[70px]`
   - `max-h-[70px]`
   - `rounded-full`
-  
+
+---
+
+### Homepage Introduction section
+
+- **Class name:** `.intro-cards-container`
+- **Layer:** components
+- **Category:** card
+- **Used for:** introduction cards
+- **Do NOT use for:** Any card not an intro card.
+- **Tailwind utilities applied:**
+  - `m-10`
+  - `mt-2`
+  - `text-brand-charcoal`
+  - `text-left`
+  - `block`
+  - `md:flex`
+  - `gap-8`
+
+---
+
+### Introduction section
+
+- **Class name:** `.card-box-wrapper`
+- **Layer:** components
+- **Category:** card
+- **Used for:** introduction cards
+- **Do NOT use for:** Any card not an intro card.
+- **Tailwind utilities applied:**
+  - `grid`
+  - `md:grid-cols-2`
+  - `gap-2`
+  - `p-2`
+
+---
+
+### Introduction section
+
+- **Class name:** `.card-box`
+- **Layer:** components
+- **Category:** card
+- **Used for:** introduction cards
+- **Do NOT use for:** Any card not an intro card.
+- **Tailwind utilities applied:**
+  - `border-2`
+  - `border-brad-gray`
+  - `p-2`
+  - `my-1`
+  - `rounded-xl`
+  - `gap-2`
+
+---
+
+### Introduction section
+
+- **Class name:** `.card-bg`
+- **Layer:** components
+- **Category:** card
+- **Used for:** introduction cards
+- **Do NOT use for:** Any card not an intro card.
+- **Tailwind utilities applied:**
+  - `mx-8`
+  - `md:mx-20`
+  - `mt-20`
+  - `mb-2`
+  - `w-auto`
+  - `h-auto`
+  - `shadow-xl`
+  - `rounded-lg`
+  - `bg-brand-purple`
+  - `bg-no-repeat`
+  - `bg-cover`
+  - `text-center`
+  - `justify-center bg-blend-soft-light`
+  - `hover:bg-blend-darken`
+  - `transition`
+  - `ease-out`
+  - `duration-500`
+
+---
+
+### Introduction section
+
+- **Class name:** `.bg-circle`
+- **Layer:** components
+- **Category:** card
+- **Used for:** introduction cards
+- **Do NOT use for:** Any card not an intro card.
+- **Tailwind utilities applied:**
+  - `w-16`
+  - `h-16`
+  - `rounded-full`
+  - `bg-brand-purple50`
+  - `absolute`
+
 ---
