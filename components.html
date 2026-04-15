@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NGO Website</title>
+    <link href="dist/output.css" rel="stylesheet" />
+  </head>
+  <body class="font-body">
+    <!-- Navbar -->
+    <nav class="bg-brand-purple text-white p-4">
+      <h1 class="font-heading text-xl">NGO Name</h1>
+    </nav>
+
+
+    <section class=" hero-section">
+    <div class=" flex flex-col items-center justify-center text-center pt-12 pb-12">
+    <h1 class="hero-header-text">Foundations First. Futures Forever.</h1>
+    <p class=" text-xl font-sans font-light max-w-[42ch] lg:max-w-[41ch] text-center mb-12">We equip underrepresented children with 
+      coding skills and digital confidence — empowering
+       them to <span class="text-brand-coral"> imagine</span>, <span class="text-brand-aqua">create</span> , and <span class="text-brand-yellow">lead.</span></p>
+    <img src="assets/images/hero-section-coding-workspace.png" class=" mb-10" alt="">
+    <div class="flex flex-row gap-6 mt-4">
+       <button class="btn-primary bg-brand-yellow w-auto text-black flex items-center gap-1">
+        <img src="/assets/icons/RocketLaunch.png" alt="" srcset="">
+      Explore Our Programs
+    </button>
+    <button class="btn-primary bg-brand-white text-black w-auto ">
+      Support the Movement
+    </button>
+    </div>
+    </div>
+    </section>
+
+    <section class="bg-hero-gradient text-brand-coral50 p-12 text-center">
+      <h2 class="text-4xl font-heading">This is a sample background</h2>
+
+      <button class="btn-secondary btn-secondary:hover">
+        Code Equity Curriculum
+      </button>
+      <button class="btn-outline text-black btn-outline:hover">
+        Learn More
+        <img
+          src="/assets/Building-Blocks/Icon.png"
+          alt="arrow right"
+          class="btn-outline-img"
+        />
+      </button>
+
+      <button class="hero-btn">print("Hello World!")</button>
+      <button class="hero-btn bg-brand-yellow/20 text-brand-yellow">  &lt;h1&gt;Dream Big&lt;/h1&gt;</button>
+      <button class="hero-btn bg-brand-purple text-brand-purple50">while(learning) smile{};</button>
+
+      <div class="info-card bg-brand-aqua50">
+        <img
+          src="/assets/images/Frame 1597884959.png"
+          alt=""
+          class="info-card-frame"
+          srcset=""
+        />
+        <h3 class="info-card-title text-2xl">Dream Beyond Limits</h3>
+        <p class="info-card-body">
+          A hands-on outreach program that selects three promising students and
+          one teacher from each participating school. We inspire them through
+          coding sessions and leave behind our Code Equity curriculum to help
+          the entire school continue learning.
+        </p>
+        <img
+          src="/assets/images/Coding workspace.png"
+          alt=""
+          class="info-card-workspace"
+          srcset=""
+        />
+      </div>
+      <div class="blog-news-card bg-brand-white">
+        <div class="blog-news-card-header">
+          <img
+            src="/assets/icons/web tab.png"
+            alt=""
+            class="blog-news-card-frame"
+            srcset=""
+          />
+          <h3 class="blog-news-card-title">donate.js</h3>
+        </div>
+        <img
+          src="/assets/images/blog-news-Coding workspace.png"
+          alt=""
+          class="blog-news-card-workspace"
+          srcset=""
+        />
+      </div>
+    </section>
+    <section>
+      <!-- Form -->
+      <div class="contact-form border-2">
+        <!-- Title -->
+        <h2 class="contact-title">Contact Form</h2>
+
+        <!-- Form -->
+        <form class="space-y-6">
+          <!-- Full Name -->
+          <div class="contact-form__field">
+            <label for="fullName" class="contact-form__innerLabel px-3 pt-2">
+              Full Name<span class="text-red-500">*</span>
+            </label>
+
+            <input
+              id="fullName"
+              type="text"
+              placeholder="example@domain.com"
+              class="contact-form__input px-3"
+              required
+            />
+          </div>
+
+          <!-- Email Address -->
+          <div class="contact-form__field">
+            <label for="email" class="contact-form__innerLabel px-3 pt-2">
+              Email Address<span class="text-red-500">*</span>
+            </label>
+            <input
+              type="email"
+              placeholder="example@domain.com"
+              class="contact-form__input px-3"
+              required
+            />
+          </div>
+
+          <!-- Subject -->
+          <div class="contact-form__field">
+            <label for="subject" class="contact-form__innerLabel px-3 pt-2">
+              Subject<span class="text-red-500">*</span>
+            </label>
+            <input
+              type="text"
+              placeholder="Write message subject"
+              class="contact-form__input px-3"
+              required
+            />
+          </div>
+
+          <!-- Message -->
+          <div>
+            <div class="contact-form__textareaField">
+              <label for="message" class="contact-form__innerLabel">
+                Message<span class="text-red-500">*</span>
+              </label>
+
+              <textarea
+                id="message"
+                class="contact-form__textarea"
+                placeholder="Write message"
+                maxlength="1000"
+                required
+              ></textarea>
+            </div>
+
+            <div class="contact-form__counter">
+              <span id="messageCount">0</span>/1000
+            </div>
+          </div>
+
+          <!-- Submit -->
+          <div class="flex justify-end">
+            <button
+              type="submit"
+              class="bg-brand-yellow hover:bg-brand-yellow text-black font-semibold text-lg px-8 py-3 rounded-lg transition"
+            >
+              Send Message
+            </button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <!-- Success Example -->
+    <div class="p-6 text-brand-blue">✅ Your donation makes an impact!</div>
+
+    <section class="p-12 flex justify-start">
+      <article class="profile-card">
+        <div class="profile-card__avatar-wrap">
+          <img
+            class="profile-card__avatar"
+            src="assets/img/profile-card-1.jpg"
+            alt="Shola Ogunkelu"
+            width="120"
+            height="120"
+            loading="lazy"
+          />
+        </div>
+
+        <h3 class="profile-card__name font-heading">Shola Ogunkelu</h3>
+        <p class="profile-card__role font-body">
+          Founder &amp; Coding Educator
+        </p>
+
+        <p class="profile-card__bio font-body">
+          A passionate educator and software engineer dedicated to making tech
+          education accessible to all kids, especially those in low-resource
+          communities.
+        </p>
+      </article>
+    </section>
+     <div id="app">
+    <!-- Only your unique page content goes here -->
+
+   
+
+  </div>
+    <script src="/javaScript/main.js"></script>
+     <!-- card with girls-->
+  <div class="girls-card ml-8">
+  <div class="girls-top">
+    <img src="assets\img\Frame 1597884959 (1).png" class="camera-pic" />
+    <div class="dots">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+
+  <img src="assets/img/78af408106357a4689834e442e874f4fd971ba2e (1).jpg" class="girls-pic scale-x-[-1] " />
+  </div>
+
+   <div class="base-container">
+    
+   </div>
+  </body>
+
+</html>

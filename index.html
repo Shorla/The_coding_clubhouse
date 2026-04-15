@@ -1,193 +1,295 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>NGO Website</title>
-    <link href="dist/output.css" rel="stylesheet" />
-  </head>
-  <body class="font-body">
-    <!-- Navbar -->
-    <nav class="bg-brand-purple text-white p-4">
-      <h1 class="font-heading text-xl">NGO Name</h1>
-    </nav>
-
-    <!-- Hero Section -->
-    <section class="bg-brand-purple text-white p-12 text-center">
-      <h2 class="text-4xl font-heading">Welcome to Our NGO</h2>
-      <p class="mt-2">Making the world better, one step at a time.</p>
-      <button class="btn-primary bg-brand-yellow">Explore Our Programs</button>
-    </section>
-    <section class="bg-hero-gradient text-brand-coral50 p-12 text-center">
-      <h2 class="text-4xl font-heading">This is a sample background</h2>
-
-      <button class="btn-secondary btn-secondary:hover">
-        Code Equity Curriculum
-      </button>
-      <button class="btn-outline text-black btn-outline:hover">
-        Learn More
-        <img
-          src="/assets/Building Blocks/Icon.png"
-          alt="arrow right"
-          class="btn-outline-img"
-        />
-      </button>
-      <div class="info-card bg-brand-aqua50">
-        <img
-          src="/assets/Frame 1597884959.png"
-          alt=""
-          class="info-card-frame"
-          srcset=""
-        />
-        <h3 class="info-card-title text-2xl">Dream Beyond Limits</h3>
-        <p class="info-card-body">
-          A hands-on outreach program that selects three promising students and
-          one teacher from each participating school. We inspire them through
-          coding sessions and leave behind our Code Equity curriculum to help
-          the entire school continue learning.
-        </p>
-        <img
-          src="/assets/Coding workspace.png"
-          alt=""
-          class="info-card-workspace"
-          srcset=""
-        />
-      </div>
-      <div class="blog-news-card bg-brand-white">
-        <div class="blog-news-card-header">
-          <img
-            src="/assets/web tab.png"
-            alt=""
-            class="blog-news-card-frame"
-            srcset=""
-          />
-          <h3 class="blog-news-card-title">donate.js</h3>
-        </div>
-        <img
-          src="/assets/blog-news-Coding workspace.png"
-          alt=""
-          class="blog-news-card-workspace"
-          srcset=""
-        />
-      </div>
-    </section>
-    <section>
-      <!-- Form -->
-      <div class="contact-form border-2">
-        <!-- Title -->
-        <h2 class="contact-title">Contact Form</h2>
-
-        <!-- Form -->
-        <form class="space-y-6">
-          <!-- Full Name -->
-          <div class="contact-form__field">
-            <label for="fullName" class="contact-form__innerLabel px-3 pt-2">
-              Full Name<span class="text-red-500">*</span>
-            </label>
-
-            <input
-              id="fullName"
-              type="text"
-              placeholder="example@domain.com"
-              class="contact-form__input px-3"
-              required
-            />
-          </div>
-
-          <!-- Email Address -->
-          <div class="contact-form__field">
-            <label for="email" class="contact-form__innerLabel px-3 pt-2">
-              Email Address<span class="text-red-500">*</span>
-            </label>
-            <input
-              type="email"
-              placeholder="example@domain.com"
-              class="contact-form__input px-3"
-              required
-            />
-          </div>
-
-          <!-- Subject -->
-          <div class="contact-form__field">
-            <label for="subject" class="contact-form__innerLabel px-3 pt-2">
-              Subject<span class="text-red-500">*</span>
-            </label>
-            <input
-              type="text"
-              placeholder="Write message subject"
-              class="contact-form__input px-3"
-              required
-            />
-          </div>
-
-          <!-- Message -->
-          <div>
-            <div class="contact-form__textareaField">
-              <label for="message" class="contact-form__innerLabel">
-                Message<span class="text-red-500">*</span>
-              </label>
-
-              <textarea
-                id="message"
-                class="contact-form__textarea"
-                placeholder="Write message"
-                maxlength="1000"
-                required
-              ></textarea>
-            </div>
-
-            <div class="contact-form__counter">
-              <span id="messageCount">0</span>/1000
-            </div>
-          </div>
-
-          <!-- Submit -->
-          <div class="flex justify-end">
-            <button
-              type="submit"
-              class="bg-brand-yellow hover:bg-brand-yellow text-black font-semibold text-lg px-8 py-3 rounded-lg transition"
-            >
-              Send Message
-            </button>
-          </div>
-        </form>
-      </div>
-    </section>
-
-    <!-- Success Example -->
-    <div class="p-6 text-brand-blue">✅ Your donation makes an impact!</div>
-
-    <section class="p-12 flex justify-start">
-      <article class="profile-card">
-        <div class="profile-card__avatar-wrap">
-          <img
-            class="profile-card__avatar"
-            src="assets/img/profile-card-1.jpg"
-            alt="Shola Ogunkelu"
-            width="120"
-            height="120"
-            loading="lazy"
-          />
-        </div>
-
-        <h3 class="profile-card__name font-heading">Shola Ogunkelu</h3>
-        <p class="profile-card__role font-body">
-          Founder &amp; Coding Educator
-        </p>
-
-        <p class="profile-card__bio font-body">
-          A passionate educator and software engineer dedicated to making tech
-          education accessible to all kids, especially those in low-resource
-          communities.
-        </p>
-      </article>
-    </section>
-     <div id="app">
+ <div id="app">
     <!-- Only your unique page content goes here -->
+     <section class="hero-section">
+      <div class="absolute inset-0 bg-[url('/assets/img/cch_background_image_hero-section.png')] bg-cover bg-center bg-no-repeat"></div>
+      <div class="absolute inset-0 bg-brand-purple/60"></div>
+      <div class=" relative flex flex-col items-center justify-center text-center pt-32 pb-12">
+       <div class="relative w-fit mx-auto">
+        <h1 class="hero-header-text">Foundations First. Futures Forever.</h1>
+
+         <button class="hero-btn bg-brand-aqua/5 absolute -top-10 -left-8 ">
+    print("Hello World!")
+  </button>
+
+  <!-- Top Right -->
+  <button class="hero-btn bg-brand-yellow/20 text-brand-yellow absolute -top-6 -right-10 ">
+    &lt;h1&gt;Dream Big&lt;/h1&gt;
+  </button>
+       </div> 
+    
+    <p class=" text-xl font-sans font-light max-w-[42ch] lg:max-w-[41ch] text-center mb-12">We equip underrepresented children with 
+      coding skills and digital confidence — empowering
+       them to <span class="text-brand-coral"> imagine</span>, <span class="text-brand-aqua">create</span> , and <span class="text-brand-yellow">lead.</span></p>
+    <img src="assets/images/hero-section-coding-workspace.png" class=" mb-10" alt="">
+    <div class="flex flex-row gap-6 mt-4">
+       <button class="btn-primary bg-brand-yellow w-auto text-black flex items-center gap-1">
+        <img src="/assets/icons/RocketLaunch.png" alt="" srcset="">
+      Explore Our Programs
+    </button>
+    <button class="btn-primary bg-brand-white text-black w-auto ">
+      Support the Movement
+    </button>
+    </div>
+  
+     </section>
 
    
+    <!------------------------
+    Card Section Begins
+    ------------------------>
+    <section class="py-10 text-center bg-gradient">
+      <!-- heart, html tag, and star emoji-->
+      <span class="btn-icon-wrapper">
+        <img src="/assets/icons/Tag.png" 
+          alt="">
+      </span>
+      
+      <!--  -->
+      <h1 class="hero-header-text text-brand-blue mt-4">Who We Are</h1>
+
+      <!-- small circle shape in the bg -->
+      <div class="bg-circle ml-20 md:ml-44"></div>
+      <span class="tiny-codes-snippet md:flex lg:mr-52">
+        function thecodeclubhouse &lpar;
+      </span>
+
+      <!-- content -->
+      <div class="intro-cards-container">
+        <div class="block md:w-1/2">
+          <div class="border-l-4 border-brand-purple">
+            <p class="pl-4 mb-4">
+              At <span class="font-bold text-brand-blue">Coding Clubhouse</span>, 
+                we believe every child deserves a chance to code. 
+              We are a non-profit empowering children&mdash;especially those in 
+                underrepresented communities&mdash;with foundational skills in 
+              computer science and creative problem solving.
+            </p>
+            <p class="pl-4 mb-4">
+              We give children that chance through our Dream Beyond Limits events, 
+                teachers training programs, summer coding classes, 
+              and our inclusive Code Equity Curriculum. Whether in school or community 
+               <i>we&apos;re building a space where kids can dream and build boldly.</i>
+            </p>
+          </div>
+
+          <div class="card-box-wrapper">
+            <span class="card-box flex pt-4 md:pt-2">
+              <img src="/assets/icons/Inclusive.png" 
+                alt="inclusive-icon"
+              >
+              Inclusive
+            </span>
+
+            <span class="card-box flex">
+            <img src="/assets/icons/Frame 1597884968.png" 
+                alt="commuity-icon"
+              >
+                Community Focused
+            </span>
+
+            <span class="card-box flex">
+              <img src="/assets/icons/Frame 1597884969.png" 
+                alt="impact-icon"
+              >
+              Impact Driven
+            </span>
+
+            <span class="card-box flex">
+              <img src="/assets/icons/Frame 1597884970.png" 
+                  alt="Globe-icon"
+                >
+                Accessible
+            </span>
+          </div>
+
+          <!-- learn more button -->
+          <button class="btn-outline text-black btn-outline:hover m-4">
+            Learn More
+            <img
+              src="/assets/Building-Blocks/Icon.png"
+              alt="arrow right"
+              class="btn-outline-img"
+            />
+          </button>
+        </div>
+
+        <!-- tiny backgroung codes -->
+        <span class="tiny-codes-snippet md:hidden">
+          function thecodeclubhouse &lpar;
+        </span>
+
+        <!-- cards -->
+        
+        <div class="blog-news-card bg-brand-white">
+            <div class="blog-news-card-header">
+              <img
+                src="/assets/icons/web tab.png"
+                alt=""
+                class="blog-news-card-frame"
+                srcset=""
+              />
+              <h3 class="blog-news-card-title">our-mission.js</h3>
+            </div>
+            <img
+              src="/assets/images/Coding-workspace-card.png"
+              alt=""
+              class="blog-news-card-workspace"
+              srcset=""
+            />
+              
+          <div class="card-box-wrapper grid-cols-2">
+            <span class="card-box bg-brand-aqua50 block text-center">
+              <span class="text-brand-aqua font-bold text-2xl block">&infin;</span>
+              Potential
+            </span>
+
+            <span class="card-box bg-orange-100 text-center">
+              <span class="text-brand-coral font-bold block">100%</span>
+              Inclusive
+            </span>
+
+            <span class="card-box bg-brand-violet50 text-center">
+              <span class="text-brand-purple font-bold block">0</span>
+              Barriers
+            </span>
+
+            <span class="card-box bg-yellow-100 text-center">
+              <span class="text-brand-yellow font-bold block">1</span>
+              Mission
+            </span>
+          </div>
+        </div>
+      </div>  
+      <figcaption class="text-brand-blue mx-4">
+        &cir; <q>Coding is not about technology, it's about changing the world.</q> &cir;
+      </figcaption>
+    </section>
+    <!------------------------
+    Card Section Ends
+    ------------------------>
+
+    <!------------------------
+    info Section Begins
+    ------------------------>
+    <section class="info-section bg-hero-gradient" 
+        style="background-image: url(/assets/icons/Vector.png)">
+      <!-- heart and star emoji-->
+      <span class="btn-icon-wrapper">
+        <img 
+          src="/assets/icons/card-tag.png"
+          alt=""
+        >
+      </span>
+      
+      <div class="btn-icon-wrapper">
+        <h1 class="hero-header-text my-4 text-brand-purple text-center">What We Do</h1>
+        <!-- small circle shape in the bg -->
+        <div class="bg-circle w-12 h-12 right-2 md:right-24"></div>
+      </div>
+      <p>
+        We design inclusive, beginner-friendly programs that introduce children and communities to the <br>
+        world of tech &mdash; no prior experience needed.
+      </p>
+      <h3 class="info-card-title text-center p-5">Featured Programs</h3>
+      <small class="text-brand-violet flex justify-end mb-4">function learn [] &lbrace; </small>
+
+      <div class="block border-l-cyan-800 md:flex gap-8 justify-center">
+        <!-- card one -->
+        <div class="info-card bg-brand-aqua50 p-5 mb-4">
+          <img 
+            src="/assets/icons/Frame 1597884959.png" 
+            alt="dots"
+          >
+          <h3 class="info-card-title">
+            Dream Beyond Limits
+          </h3>
+          <p class="info-card-body">
+            A hands-on outreach program that selects three promising
+              students and one teacher 
+            from each participating school. We inspire them through coding sessions and leave
+              behind our Code Equity curriculum to help the entire school continue learning.
+          </p>
+          
+          <div class="info-card-workspace">
+            <img 
+              src="/assets/images/Coding workspace.png" 
+              alt="code blocks"
+            >
+          </div>
+        </div>
+
+        <!-- card two -->
+        <div class="info-card bg-brand-yellow50 p-5 mb-4">
+          <img 
+            src="/assets/icons/teacher-tag.png" 
+            alt="dots"
+          >
+          <h3 class="info-card-title">Teacher Training &amp; Youth Empowerment</h3>
+          <p class="info-card-body">
+            We equip teachers and local youth with the skills to teach coding confidently. 
+              This initiative not only creates jobs but builds a community of trained educators 
+            who champion digital literacy.
+          </p>  
+
+          <div class="info-card-workspace">
+            <img 
+              src="/assets/images/Coding workspace (1).png" 
+              alt="code snippets"
+            >
+          </div>
+        </div>
+        
+        <!-- card three -->
+        <div class="info-card bg-brand-coral50 p-5 mb-2">
+          <img 
+            src="/assets/icons/Frame 1597884959 (1).png" 
+            alt="dots"
+          >
+          <h3 class="info-card-title">Virtual Summer Classes</h3>
+          <p class="info-card-body">
+           Our annual summer program brings tech education to even more children through online classes. 
+            With four engaging tracks &mdash; including web development, game design, AI, and computer science basics &mdash; 
+          every child finds something to explore.
+          </p>  
+
+          <div class="info-card-workspace">
+            <img 
+              src="/assets/images/Coding workspace (2).png" 
+              alt="code snippets"
+            >
+          </div>
+        </div>
+
+        <small class="text-brand-violet absolute right-0 mt-20">return 'fun</small>
+      </div>
+
+        <!-- small circle shape in the bg -->
+      <div class="ml-2">
+        <img 
+          src="/assets/icons/Component 2.png" 
+          alt="background circle" 
+          srcset=""
+        >
+      </div>
+
+      <button class="btn-primary bg-brand-yellow text-brand-charcoal m-6">
+        <a class="btn-icon-wrapper" href="/">
+        <img 
+          src="/assets/icons/RocketLaunch.png" 
+          alt="rocket-icon"
+        > 
+        Explore our programs
+        </a>
+      </button>
+
+      <figcaption class="text-brand-purple mx-4">
+        &cir; Building the future, one at a time... &cir;
+      </figcaption>
+    </section>
+
+    <!--------------------------
+      Info Section Ends
+    --------------------------->
 
   </div>
     <script src="/javaScript/main.js"></script>
-  </body>
-</html>
