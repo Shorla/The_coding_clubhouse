@@ -1,5 +1,12 @@
 // layout.js
-// Fetches navbar and footer HTML files and injects them around your page content
+
+async function fetchHTML(path) {
+  const res = await fetch(path);
+  if (!res.ok) {
+    throw new Error(`Failed to fetch ${path}: ${res.status}`);
+  }
+  return await res.text();
+}
 
 async function loadLayout() {
   const app = document.getElementById("app");
@@ -8,31 +15,44 @@ async function loadLayout() {
     return;
   }
 
-  // Grab the main content already inside #app
   const mainContent = app.innerHTML;
 
   try {
-    // Fetch navbar and footer HTML files in parallel
-    const [navbarRes, footerRes] = await Promise.all([
-      fetch("/components/navbar.html"),
-      fetch("/components/footer.html"),
+    const [navbarHTML, footerHTML] = await Promise.all([
+      fetchHTML("/components/navbar.html"),
+      fetchHTML("/components/footer.html"),
     ]);
 
-    const navbarHTML = await navbarRes.text();
-    const footerHTML = await footerRes.text();
-
-    // Reassemble: Navbar + main content + Footer
     app.innerHTML = `
       ${navbarHTML}
-      <main>
+      <main id="page-content">
         ${mainContent}
       </main>
       ${footerHTML}
     `;
+
+    await loadPartials();
   } catch (err) {
     console.error("Failed to load layout components:", err);
   }
 }
 
-// Auto-run when DOM is ready
+async function loadPartials() {
+  const partialNodes = document.querySelectorAll("[data-include]");
+
+  await Promise.all(
+    [...partialNodes].map(async (node) => {
+      const file = node.getAttribute("data-include");
+      if (!file) return;
+
+      try {
+        const html = await fetchHTML(file);
+        node.innerHTML = html;
+      } catch (err) {
+        console.error(`Failed to load partial: ${file}`, err);
+      }
+    }),
+  );
+}
+
 document.addEventListener("DOMContentLoaded", loadLayout);
