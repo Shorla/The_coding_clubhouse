@@ -25,11 +25,16 @@
   }
   .hero-header-text {
     @apply text-4xl font-heading mb-6 my-6 md:my-8 lg:my-10;
+   @apply text-5xl font-heading mb-6 my-6 md:my-8 lg:my-10;
   }
   .hero-p {
-    @apply font-sans p-5 text-2xl;
+    @apply font-sans p-5 text-3xl;
   }
-
+  .hero-bg {
+    @apply w-full h-[900px]
+    font-sans text-brand-white text-center 
+    bg-no-repeat bg-cover bg-brand-purple bg-blend-darken;
+  }
   .hero-btn {
     @apply text-sm font-light bg-brand-white/10 text-brand-aqua p-1.5 px-4 py-2 rounded-md;
   }
@@ -77,7 +82,7 @@
     @apply w-20 h-10 mt-1;
   }
   .blog-news-card {
-    @apply px-4 py-5 shadow-md rounded-xl max-w-[500px] w-full;
+    @apply px-4 py-5 shadow-2xl rounded-xl max-w-[500px] w-full;
   }
   .blog-news-card-workspace {
     @apply w-full h-48 mt-4 mb-1 rounded-md;
@@ -287,3 +292,24 @@
 .bg-circle {
   @apply w-16 h-16 rounded-full bg-brand-purple50 absolute;
 }
+
+ /* cards section */
+  .intro-cards-container{
+    @apply m-12 mt-2 text-brand-charcoal text-left block md:flex gap-8;
+  }
+  .card-box-wrapper {
+    @apply grid md:grid-cols-2 gap-2 p-2;
+  }
+  .card-box {
+    @apply border-2 border-brand-gray m-1 rounded-xl gap-2;
+  }
+  .card-bg{
+    @apply mx-8 md:mx-20 mt-20 mb-2 
+    w-auto h-auto shadow-xl rounded-lg 
+    bg-brand-purple bg-no-repeat bg-cover 
+    text-center justify-center 
+    bg-blend-soft-light hover:bg-blend-darken transition ease-out duration-500;
+  }
+  .bg-circle{
+    @apply w-16 h-16 rounded-full bg-brand-purple50 absolute;
+  } 
