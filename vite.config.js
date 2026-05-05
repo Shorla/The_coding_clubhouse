@@ -10,6 +10,7 @@ export default defineConfig({
         { src: 'javaScript', dest: '.' },
         { src: 'fonts', dest: '.' },
         { src: 'output.css', dest: '.' },
+        { src: 'assets', dest: '.' },
       ]
     })
   ],
