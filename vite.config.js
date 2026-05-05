@@ -30,4 +30,4 @@ export default defineConfig({
       ignored: ['!**/dist/**']
     }
   }
-}
+})
