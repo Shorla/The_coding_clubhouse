@@ -209,23 +209,39 @@
   @apply bg-brand-purple 
     text-brand-white text-center 
     w-full h-auto 
-    flex justify-between sticky relative
+    flex justify-between sticky
     top-0 m-0 p-2;
+  position: relative;  /* keeps dropdown scoped to header */
 }
-.hamburger-icon {
-  @apply mt-2 cursor-pointer md:hidden;
-}
+
 .mobile-menu {
-  @apply hidden w-full flex-col gap-2 bg-brand-purple px-4 pb-4 font-sans text-sm font-medium text-brand-white;
+  @apply hidden flex-col gap-1 font-sans text-sm font-medium;
+  position: absolute;
+  top: 100%;        /* sits just below the navbar bar */
+  left: 0;
+  right: 0;
+  background-colour: white;
+  color: #2d2d2d;
+  padding: 1rem 1.5rem;
+  z-index: 50;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
 .mobile-menu.open {
   @apply flex;
 }
 
-  .mobile-menu.open {
-    @apply flex;
-  }
+.mobile-menu li {
+  @apply py-3 border-b border-gray-100;
+}
+
+.mobile-menu li:last-child {
+  @apply border-none pt-4;
+}
+.hamburger-icon {
+  @apply mt-2 cursor-pointer md:hidden;
+}
+
 .navbar-links-wrapper {
   @apply text-sm text-center 
     font-sans font-medium
