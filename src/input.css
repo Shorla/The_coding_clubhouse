@@ -215,6 +215,17 @@
 .hamburger-icon {
   @apply mt-2 cursor-pointer md:hidden;
 }
+ .mobile-menu {
+    @apply hidden w-full flex-col gap-2 bg-brand-purple px-4 pb-4 font-sans text-sm font-medium text-brand-white;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+  }
+
+  .mobile-menu.open {
+    @apply flex;
+  }
 .navbar-links-wrapper {
   @apply text-sm text-center 
     font-sans font-medium
