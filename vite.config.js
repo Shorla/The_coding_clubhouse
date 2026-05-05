@@ -6,9 +6,9 @@ export default defineConfig({
   plugins: [
     viteStaticCopy({
       targets: [
-        { src: 'components/*', dest: 'components' },
-        { src: 'assets/*', dest: 'assets' },
-        { src: 'fonts/*', dest: 'fonts' },
+        { src: 'components', dest: '.' },
+        { src: 'javaScript', dest: '.' },
+        { src: 'fonts', dest: '.' },
       ]
     })
   ],
