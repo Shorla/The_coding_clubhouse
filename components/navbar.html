@@ -11,74 +11,69 @@
   <!-------------------
   Navbar Begins
   --------------------->
-  <header class="navbar-container">
-    <div>
-      <a href="/index.html">
-        <img src="/assets/icons/Frame 2.png" 
-          alt="NGO Logo" 
-          class="w-32 h-auto">
+  <header class="navbar-container" style="position: relative;">
+  <div>
+    <a href="/index.html">
+      <img src="/assets/icons/Frame 2.png" 
+        alt="Coding Clubhouse Logo" 
+        class="w-32 h-auto">
+    </a>
+  </div>
+
+  <nav style="display: flex; align-items: center;">
+
+    <!-- Hamburger (mobile only) -->
+    <button
+      id="hamburger-btn"
+      class="hamburger-icon"
+      aria-label="Toggle navigation"
+      aria-expanded="false"
+      aria-controls="mobile-menu">
+      <img 
+        src="/assets/icons/solar_hamburger-menu-bold.png" 
+        alt="" 
+        aria-hidden="true">
+    </button>
+
+    <!-- Desktop links -->
+    <ul class="navbar-links-wrapper">
+      <li><a href="/about.html" class="navbar-links">About Us</a></li>
+      <li>
+        <a href="/programs.html" class="navbar-links flex gap-1 items-center">
+          Programs
+          <img src="/assets/icons/Icon.png" alt="" class="h-2 w-3" aria-hidden="true">
+        </a>
+      </li>
+      <li><a href="#" class="navbar-links">Resources</a></li>
+      <li><a href="#" class="navbar-links">Get Involved</a></li>
+      <li>
+        <a href="#" class="btn-primary bg-brand-yellow text-brand-charcoal flex items-center gap-2">
+          <img src="/assets/icons/Heart.png" alt="" aria-hidden="true"> Donate
+        </a>
+      </li>
+      <li><a href="#" class="btn-primary bg-brand-white text-brand-charcoal">Contact Us</a></li>
+    </ul>
+
+  </nav>
+
+  <!-- Mobile menu dropdown -->
+  <ul id="mobile-menu" class="mobile-menu" aria-label="Mobile navigation">
+    <li><a href="/about.html" class="navbar-links">About Us</a></li>
+    <li>
+      <a href="/programs.html" class="navbar-links flex items-center gap-1">
+        Programs <img src="/assets/icons/Icon.png" alt="" class="h-2 w-3" aria-hidden="true">
       </a>
-    </div> 
-    <nav>  
-      <!--Hamburger-->
-      <div class="hamburger-icon">
-        <img 
-          src="/assets/icons/solar_hamburger-menu-bold.png" 
-          alt="hamburger-icon"
-        >
-      </div>
-          
-      <!--Links to webpages-->
-      <ul class="navbar-links-wrapper">
-        <li class="mt-2">
-          <a 
-            href="/about.html" 
-            class="navbar-links">
-            About Us
-          </a>
-        </li>
+    </li>
+    <li><a href="#" class="navbar-links">Resources</a></li>
+    <li><a href="#" class="navbar-links">Get Involved</a></li>
+    <li style="display:flex; gap:0.5rem; padding: 0.5rem;">
+      <a href="#" class="btn-primary bg-brand-yellow text-brand-charcoal flex items-center gap-2">
+        <img src="/assets/icons/Heart.png" alt="" aria-hidden="true"> Donate
+      </a>
+      <a href="#" class="btn-primary bg-brand-white text-brand-charcoal">Contact Us</a>
+    </li>
+  </ul>
 
-        <li>
-          <a href="/programs.html" 
-            class="navbar-links flex gap-1">
-            Programs
-            <img 
-              src="/assets/icons/Icon.png" 
-              alt="arrow-icon" 
-              class="h-2 w-3 mt-1.5"
-            >
-          </a>
-        </li>
-
-        <li class="mt-2">
-          <a href="#" 
-             class="navbar-links">
-             Resources
-          </a>
-        </li>
-
-        <li class="mt-2">
-          <a href="#" 
-            class="navbar-links">
-            Get Involved
-          </a>
-        </li>
-
-        <li>
-          <a href="#" 
-            class="btn-primary bg-brand-yellow text-brand-charcoal flex">
-            <img src="/assets/icons/Heart.png" alt="heart-icon">
-            Donate
-          </a>
-        </li>
-
-        <li class="mt-2">
-          <a href="#" class="btn-primary bg-brand-white text-brand-charcoal">
-            Contact Us
-          </a>
-        </li>
-      </ul>
-    </nav>
 </header>
 <!-----------------------
   End Nav Bar
