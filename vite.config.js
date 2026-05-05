@@ -9,6 +9,7 @@ export default defineConfig({
         { src: 'components', dest: '.' },
         { src: 'javaScript', dest: '.' },
         { src: 'fonts', dest: '.' },
+        { src: 'output.css', dest: '.' },
       ]
     })
   ],
