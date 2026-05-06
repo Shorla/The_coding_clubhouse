@@ -215,28 +215,110 @@
 }
 
 .mobile-menu {
-  @apply hidden flex-col gap-1 font-sans text-sm font-medium;
+  display: none;
+  flex-direction: column;
   position: absolute;
-  top: 100%;        /* sits just below the navbar bar */
+  top: 100%;
   left: 0;
   right: 0;
-  background-colour: white;
-  color: #2d2d2d;
-  padding: 1rem 1.5rem;
+  background-color: white;
   z-index: 50;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  border-radius: 0 0 16px 16px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+  padding: 1rem 1.5rem 1.5rem;
 }
 
 .mobile-menu.open {
-  @apply flex;
+  display: flex;
 }
 
-.mobile-menu li {
-  @apply py-3 border-b border-gray-100;
+.mobile-menu__links {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
 }
 
-.mobile-menu li:last-child {
-  @apply border-none pt-4;
+.mobile-menu__link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 1rem 0;
+  font-size: 1.125rem;
+  font-weight: 500;
+  color: #2d2d2d;
+  border-bottom: 1px solid #f0f0f0;
+  background: transparent;
+  text-align: left;
+  cursor: pointer;
+}
+
+.mobile-menu__link:last-child {
+  border-bottom: none;
+}
+
+.mobile-menu__programs-btn svg {
+  transition: transform 0.2s ease;
+}
+
+.mobile-menu__submenu {
+  display: none;
+  flex-direction: column;
+  background-color: #f5f5f5;
+  border-radius: 12px;
+  padding: 0.5rem 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.mobile-menu__submenu.open {
+  display: flex;
+}
+
+.mobile-menu__sublink {
+  padding: 0.75rem 0;
+  font-size: 1rem;
+  color: #2d2d2d;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.mobile-menu__sublink:last-child {
+  border-bottom: none;
+}
+
+.mobile-menu__btns {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-top: 1.25rem;
+  width: 100%;
+}
+
+.mobile-menu__donate {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  width: 100%;
+  padding: 0.875rem;
+  background-color: #FFD447;
+  color: #2d2d2d;
+  font-weight: 600;
+  font-size: 1rem;
+  border-radius: 12px;
+}
+
+.mobile-menu__contact {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 0.875rem;
+  background-color: white;
+  color: #2d2d2d;
+  font-weight: 600;
+  font-size: 1rem;
+  border-radius: 12px;
+  border: 2px solid #8C52FF;
 }
 .hamburger-icon {
   @apply mt-2 cursor-pointer md:hidden;
