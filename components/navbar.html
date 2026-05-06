@@ -30,12 +30,20 @@
     <!-- Desktop links -->
     <ul class="navbar-links-wrapper">
       <li><a href="/about.html" class="navbar-links">About Us</a></li>
-      <li>
-        <a href="/programs.html" class="navbar-links flex gap-1 items-center">
+       <li>
+        <button class="mobile-menu__link mobile-menu__programs-btn" id="programs-toggle" aria-expanded="false">
           Programs
-          <img src="/assets/icons/Icon.png" alt="" class="h-2 w-3" aria-hidden="true">
-        </a>
+          <svg id="programs-chevron" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <ul class="mobile-menu__submenu" id="programs-submenu">
+          <li><a href="#" class="mobile-menu__sublink">All Programs</a></li>
+          <li><a href="#" class="mobile-menu__sublink">Dream Beyond Limits</a></li>
+          <li><a href="#" class="mobile-menu__sublink">Teacher Training & Youth Empowerment</a></li>
+          <li><a href="#" class="mobile-menu__sublink">Virtual Summer Class</a></li>
+          <li><a href="#" class="mobile-menu__sublink">Code Equity Curriculum</a></li>
+        </ul>
       </li>
+
       <li><a href="#" class="navbar-links">Resources</a></li>
       <li><a href="#" class="navbar-links">Get Involved</a></li>
       <li>
