@@ -11,21 +11,23 @@
   <!-------------------
   Navbar Begins
   --------------------->
- <header class="navbar-container">
+<header class="navbar-container">
   <a href="/index.html">
     <img src="/assets/icons/Frame 2.png" alt="Coding Clubhouse Logo" class="w-32 h-auto">
   </a>
 
   <nav style="display:flex; align-items:center;">
+    <!-- Hamburger / Close button (mobile only) -->
     <button
       id="hamburger-btn"
       class="hamburger-icon"
       aria-label="Toggle navigation"
       aria-expanded="false"
       aria-controls="mobile-menu">
-      <img src="/assets/icons/solar_hamburger-menu-bold.png" alt="" aria-hidden="true">
+      <img id="hamburger-icon-img" src="/assets/icons/solar_hamburger-menu-bold.png" alt="" aria-hidden="true">
     </button>
 
+    <!-- Desktop links -->
     <ul class="navbar-links-wrapper">
       <li><a href="/about.html" class="navbar-links">About Us</a></li>
       <li>
@@ -45,23 +47,40 @@
     </ul>
   </nav>
 
-  <!-- Mobile dropdown -->
-  <ul id="mobile-menu" class="mobile-menu" aria-label="Mobile navigation">
-    <li><a href="/about.html" class="navbar-links">About Us</a></li>
-    <li>
-      <a href="/programs.html" class="navbar-links flex items-center gap-1">
-        Programs <img src="/assets/icons/Icon.png" alt="" class="h-2 w-3" aria-hidden="true">
-      </a>
-    </li>
-    <li><a href="#" class="navbar-links">Resources</a></li>
-    <li><a href="#" class="navbar-links">Get Involved</a></li>
-    <li>
-      <a href="#" class="btn-primary bg-brand-yellow text-brand-charcoal flex items-center gap-2">
+  <!-- Mobile dropdown panel -->
+  <div id="mobile-menu" class="mobile-menu" aria-label="Mobile navigation">
+
+    <ul class="mobile-menu__links">
+      <li><a href="/about.html" class="mobile-menu__link">About Us</a></li>
+
+      <!-- Programs with submenu -->
+      <li>
+        <button class="mobile-menu__link mobile-menu__programs-btn" id="programs-toggle" aria-expanded="false">
+          Programs
+          <svg id="programs-chevron" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <ul class="mobile-menu__submenu" id="programs-submenu">
+          <li><a href="#" class="mobile-menu__sublink">All Programs</a></li>
+          <li><a href="#" class="mobile-menu__sublink">Dream Beyond Limits</a></li>
+          <li><a href="#" class="mobile-menu__sublink">Teacher Training & Youth Empowerment</a></li>
+          <li><a href="#" class="mobile-menu__sublink">Virtual Summer Class</a></li>
+          <li><a href="#" class="mobile-menu__sublink">Code Equity Curriculum</a></li>
+        </ul>
+      </li>
+
+      <li><a href="#" class="mobile-menu__link">Resources</a></li>
+      <li><a href="#" class="mobile-menu__link">Get Involved</a></li>
+    </ul>
+
+    <!-- CTA Buttons -->
+    <div class="mobile-menu__btns">
+      <a href="#" class="mobile-menu__donate">
         <img src="/assets/icons/Heart.png" alt="" aria-hidden="true"> Donate
       </a>
-    </li>
-    <li><a href="#" class="btn-primary bg-brand-white text-brand-charcoal">Contact Us</a></li>
-  </ul>
+      <a href="#" class="mobile-menu__contact">Contact Us</a>
+    </div>
+
+  </div>
 </header>
 <!-----------------------
   End Nav Bar
